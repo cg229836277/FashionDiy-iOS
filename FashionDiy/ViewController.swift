@@ -8,33 +8,24 @@
 
 import UIKit
 
-class ViewController: UIViewController , UIGestureRecognizerDelegate{
+class ViewController: UIViewController{
     
-    @IBOutlet weak var maleDesignImage: UIImageView!
-
+    @IBOutlet weak var maleButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationController?.navigationBarHidden = true
         self.navigationController?.navigationBar.translucent = true
-        initImageView()
+        initBtnBounds(maleButton)
     }
     
-    @IBAction func maleBtnClicked(sender: UIButton) {
-        
+    func initBtnBounds(customBtn:UIButton){
+        let titleBounds = customBtn.titleLabel?.bounds
+        customBtn.imageEdgeInsets = UIEdgeInsetsMake(0, -(titleBounds?.width)!, 0, 0)
+        customBtn.imageView?.contentMode = UIViewContentMode.ScaleAspectFill
+        customBtn.titleEdgeInsets = UIEdgeInsetsMake(-(titleBounds?.height)!, -(titleBounds?.width)!, 0, 0)
     }
-    func initImageView(){
-        let maleImageRecognizer = UITapGestureRecognizer(target: self, action: "maleImageViewClicked:")
-        maleImageRecognizer.delegate = self
-        maleDesignImage.addGestureRecognizer(maleImageRecognizer)
-    }
-    
-    func maleImageViewClicked(sender:AnyObject){
-        print("male image clicked")
-        let maleDesignController = MaleDesignViewController()
-        self.presentViewController(maleDesignController, animated: true, completion: nil)
-    }
-    
     
 
     override func didReceiveMemoryWarning() {

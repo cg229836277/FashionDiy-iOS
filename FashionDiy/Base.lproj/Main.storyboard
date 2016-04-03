@@ -37,21 +37,13 @@
                                                     <constraint firstAttribute="width" constant="3" id="Nu9-J8-Rdk"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="男装" translatesAutoresizingMaskIntoConstraints="NO" id="ypJ-T5-PFe">
-                                                <rect key="frame" x="0.0" y="250" width="100" height="90"/>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQP-YK-N52">
+                                                <rect key="frame" x="0.0" y="250" width="100" height="93"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="90" id="KjK-cY-SDi"/>
+                                                    <constraint firstAttribute="height" constant="93" id="nOV-Jp-mH0"/>
                                                 </constraints>
-                                            </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQP-YK-N52">
-                                                <rect key="frame" x="0.0" y="250" width="100" height="90"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="90" id="nOV-Jp-mH0"/>
-                                                </constraints>
-                                                <connections>
-                                                    <action selector="maleBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="czW-6n-9KB"/>
-                                                    <segue destination="bDU-3x-Q47" kind="show" id="S7t-qz-4Tn"/>
-                                                </connections>
+                                                <state key="normal" image="男装"/>
+                                                <state key="disabled" image="男装"/>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="0.76860774310000002" blue="0.74832282400000005" alpha="0.0" colorSpace="calibratedRGB"/>
@@ -59,9 +51,6 @@
                                             <constraint firstItem="Oyy-3Z-DXx" firstAttribute="top" secondItem="Eb7-ik-ltq" secondAttribute="top" id="De9-gG-5HP"/>
                                             <constraint firstItem="gQP-YK-N52" firstAttribute="top" secondItem="Oyy-3Z-DXx" secondAttribute="bottom" id="Fre-cw-xYs"/>
                                             <constraint firstItem="Oyy-3Z-DXx" firstAttribute="centerX" secondItem="Eb7-ik-ltq" secondAttribute="centerX" id="GEc-iA-Wom"/>
-                                            <constraint firstAttribute="trailing" secondItem="ypJ-T5-PFe" secondAttribute="trailing" id="Mba-A4-XMX"/>
-                                            <constraint firstItem="ypJ-T5-PFe" firstAttribute="leading" secondItem="Eb7-ik-ltq" secondAttribute="leading" id="ZCu-25-C55"/>
-                                            <constraint firstItem="ypJ-T5-PFe" firstAttribute="top" secondItem="Oyy-3Z-DXx" secondAttribute="bottom" id="hUN-TD-vkq"/>
                                             <constraint firstItem="gQP-YK-N52" firstAttribute="leading" secondItem="Eb7-ik-ltq" secondAttribute="leading" id="lKi-if-f70"/>
                                             <constraint firstAttribute="trailing" secondItem="gQP-YK-N52" secondAttribute="trailing" id="rKb-IT-AGq"/>
                                         </constraints>
@@ -203,12 +192,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="sHe-OT-lvH"/>
                     <connections>
-                        <outlet property="maleDesignImage" destination="ypJ-T5-PFe" id="3b4-0c-Abw"/>
+                        <outlet property="maleButton" destination="gQP-YK-N52" id="L2G-6p-uZn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="785" y="171"/>
+            <point key="canvasLocation" x="756" y="227"/>
         </scene>
         <!--设计页-->
         <scene sceneID="IrL-of-scD">
