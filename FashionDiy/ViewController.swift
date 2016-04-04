@@ -17,14 +17,8 @@ class ViewController: UIViewController{
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationController?.navigationBarHidden = true
         self.navigationController?.navigationBar.translucent = true
-        initBtnBounds(maleButton)
-    }
-    
-    func initBtnBounds(customBtn:UIButton){
-        let titleBounds = customBtn.titleLabel?.bounds
-        customBtn.imageEdgeInsets = UIEdgeInsetsMake(0, -(titleBounds?.width)!, 0, 0)
-        customBtn.imageView?.contentMode = UIViewContentMode.ScaleAspectFill
-        customBtn.titleEdgeInsets = UIEdgeInsetsMake(-(titleBounds?.height)!, -(titleBounds?.width)!, 0, 0)
+        
+        maleButton.imageView?.contentMode = UIViewContentMode.ScaleAspectFill
     }
     
 
