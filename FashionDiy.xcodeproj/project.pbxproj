@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB4436D91CB3F4FB00B280F4 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4436D81CB3F4FB00B280F4 /* CustomButton.swift */; };
 		DB656A8D1CABF16D008D774B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB656A8C1CABF16D008D774B /* AppDelegate.swift */; };
 		DB656A8F1CABF16D008D774B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB656A8E1CABF16D008D774B /* ViewController.swift */; };
 		DB656A921CABF16D008D774B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB656A901CABF16D008D774B /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB4436D81CB3F4FB00B280F4 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		DB656A891CABF16D008D774B /* FashionDiy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FashionDiy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB656A8C1CABF16D008D774B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB656A8E1CABF16D008D774B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				DB656A931CABF16D008D774B /* Assets.xcassets */,
 				DB656A951CABF16D008D774B /* LaunchScreen.storyboard */,
 				DB656A981CABF16D008D774B /* Info.plist */,
+				DB4436D81CB3F4FB00B280F4 /* CustomButton.swift */,
 			);
 			path = FashionDiy;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB4436D91CB3F4FB00B280F4 /* CustomButton.swift in Sources */,
 				DB656A8F1CABF16D008D774B /* ViewController.swift in Sources */,
 				DB656A9F1CABFE92008D774B /* MaleDesignViewController.swift in Sources */,
 				DB656A8D1CABF16D008D774B /* AppDelegate.swift in Sources */,

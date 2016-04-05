@@ -14,6 +14,8 @@ class MaleDesignViewController: UIViewController {
         super.viewDidLoad()
         //self.view.backgroundColor = UIColor.cyanColor()
         // Do any additional setup after loading the view.
+        self.navigationController?.navigationBarHidden = false
+        self.navigationController?.navigationBar.translucent = false
     }
 
     override func didReceiveMemoryWarning() {
