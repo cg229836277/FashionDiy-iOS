@@ -48,7 +48,7 @@ class CustomButton : UIButton {
     
     override func titleRectForContentRect(contentRect: CGRect) -> CGRect {
         let titleX:CGFloat = 0
-        let titleY:CGFloat = 0
+        let titleY:CGFloat = self.frame.size.height * IMAGE_RATIO
     
         let titleW:CGFloat = 0
         let titleH:CGFloat = self.frame.size.height * (1.0 - IMAGE_RATIO)

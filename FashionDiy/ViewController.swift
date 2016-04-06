@@ -10,14 +10,21 @@ import UIKit
 
 class ViewController: UIViewController{
     
-    @IBOutlet weak var maleButton: UIButton!
+    @IBOutlet weak var maleButton: CustomButton!
+    @IBOutlet weak var femaleButton: CustomButton!
+    @IBOutlet weak var coupleButton: CustomButton!
+    @IBOutlet weak var clothSetButton: CustomButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         hideNavigationBar()
-        
         maleButton.imageView?.contentMode = UIViewContentMode.Top
+        femaleButton.imageView?.contentMode = UIViewContentMode.Top
+        coupleButton.imageView?.contentMode = UIViewContentMode.Top
+        clothSetButton.imageView?.contentMode = UIViewContentMode.Top
+        
     }
     
     @IBAction func backToHome(segue : UIStoryboardSegue){
