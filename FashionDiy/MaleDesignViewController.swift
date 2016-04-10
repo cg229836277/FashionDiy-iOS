@@ -18,6 +18,11 @@ class MaleDesignViewController: UIViewController {
     @IBOutlet weak var patternButton: CustomButton!
     
     @IBOutlet weak var styleButton: CustomButton!
+    
+    @IBOutlet weak var backDesignImage: UIImageView!
+    
+    @IBOutlet weak var FrontDesignImage: UIImageView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +37,20 @@ class MaleDesignViewController: UIViewController {
         patternButton.imageView?.contentMode = UIViewContentMode.ScaleAspectFill
         styleButton.imageView?.contentMode = UIViewContentMode.ScaleAspectFill
     }
+    
+    @IBAction func backAndFrontSelected(sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex{
+        case 0:
+            backDesignImage.hidden = true
+            FrontDesignImage.hidden = false
+        case 1:
+            backDesignImage.hidden = false
+            FrontDesignImage.hidden = true
+        default:
+            break;
+        }
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
