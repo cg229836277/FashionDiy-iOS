@@ -14,6 +14,8 @@
 		DB656A941CABF16D008D774B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB656A931CABF16D008D774B /* Assets.xcassets */; };
 		DB656A971CABF16D008D774B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB656A951CABF16D008D774B /* LaunchScreen.storyboard */; };
 		DB656A9F1CABFE92008D774B /* MaleDesignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB656A9E1CABFE92008D774B /* MaleDesignViewController.swift */; };
+		DBEA67871CBA92030012432E /* BottomChooseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBEA67861CBA92030012432E /* BottomChooseView.xib */; };
+		DBEA67891CBA92360012432E /* BottomChooseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEA67881CBA92360012432E /* BottomChooseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		DB656A961CABF16D008D774B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB656A981CABF16D008D774B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB656A9E1CABFE92008D774B /* MaleDesignViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaleDesignViewController.swift; sourceTree = "<group>"; };
+		DBEA67861CBA92030012432E /* BottomChooseView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BottomChooseView.xib; sourceTree = "<group>"; };
+		DBEA67881CBA92360012432E /* BottomChooseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomChooseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				DB656A951CABF16D008D774B /* LaunchScreen.storyboard */,
 				DB656A981CABF16D008D774B /* Info.plist */,
 				DB4436D81CB3F4FB00B280F4 /* CustomButton.swift */,
+				DBEA67861CBA92030012432E /* BottomChooseView.xib */,
+				DBEA67881CBA92360012432E /* BottomChooseView.swift */,
 			);
 			path = FashionDiy;
 			sourceTree = "<group>";
@@ -131,6 +137,7 @@
 			files = (
 				DB656A971CABF16D008D774B /* LaunchScreen.storyboard in Resources */,
 				DB656A941CABF16D008D774B /* Assets.xcassets in Resources */,
+				DBEA67871CBA92030012432E /* BottomChooseView.xib in Resources */,
 				DB656A921CABF16D008D774B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,6 +153,7 @@
 				DB656A8F1CABF16D008D774B /* ViewController.swift in Sources */,
 				DB656A9F1CABFE92008D774B /* MaleDesignViewController.swift in Sources */,
 				DB656A8D1CABF16D008D774B /* AppDelegate.swift in Sources */,
+				DBEA67891CBA92360012432E /* BottomChooseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

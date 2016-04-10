@@ -43,6 +43,9 @@
                                                     <constraint firstAttribute="height" constant="90" id="Vic-JX-Qre"/>
                                                 </constraints>
                                                 <state key="normal" image="女装"/>
+                                                <connections>
+                                                    <segue destination="y2Z-Wy-LaK" kind="show" id="6Qn-3Y-lR9"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -233,12 +236,13 @@
                                     <action selector="backAndFrontSelected:" destination="amD-CO-uML" eventType="valueChanged" id="TS8-CG-vY0"/>
                                 </connections>
                             </segmentedControl>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8BZ-xd-Slh">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="j8R-x4-sRj">
                                 <rect key="frame" x="0.0" y="400" width="600" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="uTR-bd-eM6"/>
+                                    <constraint firstAttribute="height" constant="150" id="rTM-XM-KXF"/>
                                 </constraints>
-                            </scrollView>
+                            </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6cy-Bo-bxg" userLabel="DesignDetail">
                                 <rect key="frame" x="0.0" y="108" width="600" height="434"/>
                                 <subviews>
@@ -268,10 +272,6 @@
                                 </constraints>
                                 <state key="normal" image="design_model_normal"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rH-YM-nQP" customClass="CustomButton" customModule="FashionDiy" customModuleProvider="target">
-                                <rect key="frame" x="120" y="550" width="120" height="50"/>
-                                <state key="normal" image="design_camera_normal"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JAo-Pu-frt" customClass="CustomButton" customModule="FashionDiy" customModuleProvider="target">
                                 <rect key="frame" x="240" y="550" width="120" height="50"/>
                                 <state key="normal" image="design_word_normal"/>
@@ -284,17 +284,21 @@
                                 <rect key="frame" x="480" y="550" width="120" height="50"/>
                                 <state key="normal" image="design_style_normal"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rH-YM-nQP" customClass="CustomButton" customModule="FashionDiy" customModuleProvider="target">
+                                <rect key="frame" x="120" y="550" width="120" height="50"/>
+                                <state key="normal" image="design_camera_normal"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="itR-SR-7li" firstAttribute="top" secondItem="8BZ-xd-Slh" secondAttribute="bottom" id="1xb-Pa-lGN"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="8BZ-xd-Slh" secondAttribute="trailing" constant="-20" id="6Wm-GW-AzB"/>
                             <constraint firstItem="QzO-Jw-bH7" firstAttribute="top" secondItem="S38-kf-563" secondAttribute="bottom" constant="8" id="89U-3W-Iwj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6cy-Bo-bxg" secondAttribute="trailing" constant="-20" id="8bi-Fn-U9s"/>
                             <constraint firstItem="QzO-Jw-bH7" firstAttribute="leading" secondItem="Ae1-qS-wYV" secondAttribute="leadingMargin" id="9V5-q3-Fmy"/>
+                            <constraint firstItem="itR-SR-7li" firstAttribute="top" secondItem="j8R-x4-sRj" secondAttribute="bottom" id="BX5-Uf-cL6"/>
                             <constraint firstItem="I3q-ze-MzM" firstAttribute="top" secondItem="JAo-Pu-frt" secondAttribute="bottom" id="Bqw-Tr-Fjf"/>
                             <constraint firstItem="7rH-YM-nQP" firstAttribute="leading" secondItem="itR-SR-7li" secondAttribute="trailing" id="CDN-y9-xjQ"/>
                             <constraint firstItem="XyU-US-9g5" firstAttribute="height" secondItem="itR-SR-7li" secondAttribute="height" id="LX6-O9-gt0"/>
+                            <constraint firstItem="j8R-x4-sRj" firstAttribute="leading" secondItem="Ae1-qS-wYV" secondAttribute="leadingMargin" constant="-20" id="MAf-gW-WC0"/>
                             <constraint firstItem="7rH-YM-nQP" firstAttribute="width" secondItem="itR-SR-7li" secondAttribute="width" id="N2L-Cs-zvl"/>
                             <constraint firstItem="LsM-24-Di8" firstAttribute="width" secondItem="itR-SR-7li" secondAttribute="width" id="OTh-Ox-Bhn"/>
                             <constraint firstItem="XyU-US-9g5" firstAttribute="leading" secondItem="LsM-24-Di8" secondAttribute="trailing" id="OZN-JQ-0py"/>
@@ -312,10 +316,10 @@
                             <constraint firstItem="7rH-YM-nQP" firstAttribute="height" secondItem="itR-SR-7li" secondAttribute="height" id="rDH-8j-yh4"/>
                             <constraint firstItem="itR-SR-7li" firstAttribute="leading" secondItem="Ae1-qS-wYV" secondAttribute="leadingMargin" constant="-20" id="sIT-u9-UQC"/>
                             <constraint firstItem="I3q-ze-MzM" firstAttribute="top" secondItem="LsM-24-Di8" secondAttribute="bottom" id="tww-RU-YxT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="j8R-x4-sRj" secondAttribute="trailing" constant="-20" id="wpQ-NJ-XfM"/>
                             <constraint firstItem="6cy-Bo-bxg" firstAttribute="top" secondItem="QzO-Jw-bH7" secondAttribute="bottom" constant="8" id="xK1-VC-NVI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XyU-US-9g5" secondAttribute="trailing" constant="-20" id="xVq-hF-PyD"/>
                             <constraint firstItem="XyU-US-9g5" firstAttribute="width" secondItem="itR-SR-7li" secondAttribute="width" id="y5k-ab-FE5"/>
-                            <constraint firstItem="8BZ-xd-Slh" firstAttribute="leading" secondItem="Ae1-qS-wYV" secondAttribute="leadingMargin" constant="-20" id="y6G-nt-DwV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="设计页" id="Xny-Yd-lZ4">
@@ -341,7 +345,7 @@
             </objects>
             <point key="canvasLocation" x="1614" y="-496"/>
         </scene>
-        <!--View Controller-->
+        <!--女装设计页-->
         <scene sceneID="Y8o-g9-jTL">
             <objects>
                 <viewController id="y2Z-Wy-LaK" sceneMemberID="viewController">
@@ -352,10 +356,32 @@
                     <view key="view" contentMode="scaleToFill" id="yft-HT-dCq">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lz7-WX-Oix" customClass="BottomChooseView" customModule="FashionDiy" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="500" width="600" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="v1Z-xA-n3V"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mIT-K1-KHr" firstAttribute="top" secondItem="Lz7-WX-Oix" secondAttribute="bottom" id="YyO-Px-Sfa"/>
+                            <constraint firstItem="Lz7-WX-Oix" firstAttribute="leading" secondItem="yft-HT-dCq" secondAttribute="leadingMargin" constant="-20" id="dG8-pU-VZM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Lz7-WX-Oix" secondAttribute="trailing" constant="-20" id="xHv-wO-TFc"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="女装设计页" id="Alt-9F-yxb">
+                        <barButtonItem key="leftBarButtonItem" title="返回" id="VYz-6O-tgq">
+                            <connections>
+                                <segue destination="uYZ-6U-Iwy" kind="unwind" unwindAction="backToHome:" id="MpT-Z9-zm8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oIJ-NM-oW3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="uYZ-6U-Iwy" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1612" y="158"/>
         </scene>
