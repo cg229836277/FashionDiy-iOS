@@ -1,5 +1,6 @@
 import UIKit
 
+@IBDesignable
 class CustomButton : UIButton {
     let IMAGE_RATIO :CGFloat = 1  // 图片占整个按钮高度的比例
     let TITLE_FONT:CGFloat = 0   // 设置按钮标题字体默认的大小
@@ -14,7 +15,7 @@ class CustomButton : UIButton {
     }
     
     func setImageAndTitle(){
-        self.imageView?.contentMode = .Center   // 设置图片显示的模式  居中
+        self.imageView?.contentMode = .ScaleAspectFit   // 设置图片显示的模式  居中
 //        self.titleLabel?.textAlignment = .Center  // 文本文字居中显示
 //        self.titleLabel?.font = UIFont.systemFontOfSize(TITLE_FONT) //文本文字默认大小
 //        self.setTitleColor(UIColor.lightGrayColor(), forState: .Normal)  // 文本文字默认颜色
