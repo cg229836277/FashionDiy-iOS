@@ -348,7 +348,7 @@
         <!--女装设计页-->
         <scene sceneID="Y8o-g9-jTL">
             <objects>
-                <viewController id="y2Z-Wy-LaK" sceneMemberID="viewController">
+                <viewController id="y2Z-Wy-LaK" customClass="FemaleDesignViewController" customModule="FashionDiy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QGz-zu-kta"/>
                         <viewControllerLayoutGuide type="bottom" id="mIT-K1-KHr"/>
@@ -379,6 +379,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="bottomView" destination="Lz7-WX-Oix" id="lgH-WQ-uWW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oIJ-NM-oW3" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="uYZ-6U-Iwy" userLabel="Exit" sceneMemberID="exit"/>

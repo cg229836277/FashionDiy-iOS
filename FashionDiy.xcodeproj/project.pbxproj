@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB4147031CBD3626008DC090 /* FemaleDesignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4147021CBD3626008DC090 /* FemaleDesignViewController.swift */; };
 		DB4436D91CB3F4FB00B280F4 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4436D81CB3F4FB00B280F4 /* CustomButton.swift */; };
 		DB656A8D1CABF16D008D774B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB656A8C1CABF16D008D774B /* AppDelegate.swift */; };
 		DB656A8F1CABF16D008D774B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB656A8E1CABF16D008D774B /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB4147021CBD3626008DC090 /* FemaleDesignViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FemaleDesignViewController.swift; sourceTree = "<group>"; };
 		DB4436D81CB3F4FB00B280F4 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		DB656A891CABF16D008D774B /* FashionDiy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FashionDiy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB656A8C1CABF16D008D774B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				DB4436D81CB3F4FB00B280F4 /* CustomButton.swift */,
 				DBEA67861CBA92030012432E /* BottomChooseView.xib */,
 				DBEA67881CBA92360012432E /* BottomChooseView.swift */,
+				DB4147021CBD3626008DC090 /* FemaleDesignViewController.swift */,
 			);
 			path = FashionDiy;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				DB656A8F1CABF16D008D774B /* ViewController.swift in Sources */,
 				DB656A9F1CABFE92008D774B /* MaleDesignViewController.swift in Sources */,
 				DB656A8D1CABF16D008D774B /* AppDelegate.swift in Sources */,
+				DB4147031CBD3626008DC090 /* FemaleDesignViewController.swift in Sources */,
 				DBEA67891CBA92360012432E /* BottomChooseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
