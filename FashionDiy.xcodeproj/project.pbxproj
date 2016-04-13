@@ -16,8 +16,10 @@
 		DB656A941CABF16D008D774B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB656A931CABF16D008D774B /* Assets.xcassets */; };
 		DB656A971CABF16D008D774B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB656A951CABF16D008D774B /* LaunchScreen.storyboard */; };
 		DB656A9F1CABFE92008D774B /* MaleDesignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB656A9E1CABFE92008D774B /* MaleDesignViewController.swift */; };
+		DB99EC2E1CBE8C9D00BF71D5 /* BottomChooseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB99EC2D1CBE8C9D00BF71D5 /* BottomChooseView.swift */; };
+		DB99EC301CBE918800BF71D5 /* ClothSourceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB99EC2F1CBE918800BF71D5 /* ClothSourceCell.swift */; };
+		DB99EC321CBE91D800BF71D5 /* ClothSourceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB99EC311CBE91D800BF71D5 /* ClothSourceCell.xib */; };
 		DBEA67871CBA92030012432E /* BottomChooseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBEA67861CBA92030012432E /* BottomChooseView.xib */; };
-		DBEA67891CBA92360012432E /* BottomChooseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEA67881CBA92360012432E /* BottomChooseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +34,10 @@
 		DB656A961CABF16D008D774B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB656A981CABF16D008D774B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB656A9E1CABFE92008D774B /* MaleDesignViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaleDesignViewController.swift; sourceTree = "<group>"; };
+		DB99EC2D1CBE8C9D00BF71D5 /* BottomChooseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomChooseView.swift; sourceTree = "<group>"; };
+		DB99EC2F1CBE918800BF71D5 /* ClothSourceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClothSourceCell.swift; sourceTree = "<group>"; };
+		DB99EC311CBE91D800BF71D5 /* ClothSourceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClothSourceCell.xib; sourceTree = "<group>"; };
 		DBEA67861CBA92030012432E /* BottomChooseView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BottomChooseView.xib; sourceTree = "<group>"; };
-		DBEA67881CBA92360012432E /* BottomChooseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomChooseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,11 +77,13 @@
 				DB656A931CABF16D008D774B /* Assets.xcassets */,
 				DB656A951CABF16D008D774B /* LaunchScreen.storyboard */,
 				DB656A981CABF16D008D774B /* Info.plist */,
+				DB99EC311CBE91D800BF71D5 /* ClothSourceCell.xib */,
 				DB4436D81CB3F4FB00B280F4 /* CustomButton.swift */,
 				DBEA67861CBA92030012432E /* BottomChooseView.xib */,
-				DBEA67881CBA92360012432E /* BottomChooseView.swift */,
+				DB99EC2D1CBE8C9D00BF71D5 /* BottomChooseView.swift */,
 				DB4147021CBD3626008DC090 /* FemaleDesignViewController.swift */,
 				DB2ED9281CBE877500407793 /* ClothSource.swift */,
+				DB99EC2F1CBE918800BF71D5 /* ClothSourceCell.swift */,
 			);
 			path = FashionDiy;
 			sourceTree = "<group>";
@@ -141,6 +147,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB99EC321CBE91D800BF71D5 /* ClothSourceCell.xib in Resources */,
 				DB656A971CABF16D008D774B /* LaunchScreen.storyboard in Resources */,
 				DB656A941CABF16D008D774B /* Assets.xcassets in Resources */,
 				DBEA67871CBA92030012432E /* BottomChooseView.xib in Resources */,
@@ -156,12 +163,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB4436D91CB3F4FB00B280F4 /* CustomButton.swift in Sources */,
+				DB99EC2E1CBE8C9D00BF71D5 /* BottomChooseView.swift in Sources */,
 				DB656A8F1CABF16D008D774B /* ViewController.swift in Sources */,
+				DB99EC301CBE918800BF71D5 /* ClothSourceCell.swift in Sources */,
 				DB656A9F1CABFE92008D774B /* MaleDesignViewController.swift in Sources */,
 				DB656A8D1CABF16D008D774B /* AppDelegate.swift in Sources */,
 				DB2ED9291CBE877500407793 /* ClothSource.swift in Sources */,
 				DB4147031CBD3626008DC090 /* FemaleDesignViewController.swift in Sources */,
-				DBEA67891CBA92360012432E /* BottomChooseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

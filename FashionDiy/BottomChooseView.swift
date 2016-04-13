@@ -8,7 +8,7 @@
 
 import UIKit
 @IBDesignable
-class BottomChooseView: UIView {
+class BottomChooseView: UIView , UITableViewDelegate , UITableViewDataSource{
     weak var view:UIView!
     
     @IBOutlet weak var modelButton: CustomButton!
@@ -21,7 +21,9 @@ class BottomChooseView: UIView {
     
     @IBOutlet weak var styleButton: CustomButton!
     
+    @IBOutlet weak var clothTableView: UITableView!
     
+    var clothSource = ClothSource()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -46,7 +48,19 @@ class BottomChooseView: UIView {
         view.frame = bounds
         view.autoresizingMask = [UIViewAutoresizing.FlexibleWidth , UIViewAutoresizing.FlexibleHeight]
         view.translatesAutoresizingMaskIntoConstraints = true
+        clothTableView.delegate = self
+        clothTableView.dataSource = self
         addSubview(view)
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        var remain = clothSource.malePositiveSources.count % 5
+        var counts = clothSource.malePositiveSources.count / 5
+        return remain == 0 ? counts : counts + 1
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
     }
 
 }
