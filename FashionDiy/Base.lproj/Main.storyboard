@@ -236,21 +236,14 @@
                                     <action selector="backAndFrontSelected:" destination="amD-CO-uML" eventType="valueChanged" id="TS8-CG-vY0"/>
                                 </connections>
                             </segmentedControl>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="j8R-x4-sRj">
-                                <rect key="frame" x="0.0" y="400" width="600" height="150"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="rTM-XM-KXF"/>
-                                </constraints>
-                            </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6cy-Bo-bxg" userLabel="DesignDetail">
-                                <rect key="frame" x="0.0" y="108" width="600" height="434"/>
+                                <rect key="frame" x="0.0" y="108" width="600" height="424"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="design_source_cloth_white_negative" translatesAutoresizingMaskIntoConstraints="NO" id="Y1w-2k-8Id" userLabel="BackDesign">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="434"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="424"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="design_source_cloth_white_positive" translatesAutoresizingMaskIntoConstraints="NO" id="3kY-YA-32A" userLabel="FrontDesign">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="434"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="424"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.78431372549019607" green="0.88627450980392153" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
@@ -265,61 +258,26 @@
                                     <constraint firstItem="Y1w-2k-8Id" firstAttribute="leading" secondItem="6cy-Bo-bxg" secondAttribute="leading" id="z1P-dV-f5j"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="itR-SR-7li" customClass="CustomButton" customModule="FashionDiy" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="550" width="120" height="50"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uQt-Iy-GVH" customClass="BottomChooseView" customModule="FashionDiy" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="540" width="600" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Twt-Ru-Hdt"/>
+                                    <constraint firstAttribute="height" constant="60" id="3rx-6c-o9i"/>
                                 </constraints>
-                                <state key="normal" image="design_model_normal"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JAo-Pu-frt" customClass="CustomButton" customModule="FashionDiy" customModuleProvider="target">
-                                <rect key="frame" x="240" y="550" width="120" height="50"/>
-                                <state key="normal" image="design_word_normal"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LsM-24-Di8" customClass="CustomButton" customModule="FashionDiy" customModuleProvider="target">
-                                <rect key="frame" x="360" y="550" width="120" height="50"/>
-                                <state key="normal" image="design_pattern_normal"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XyU-US-9g5" customClass="CustomButton" customModule="FashionDiy" customModuleProvider="target">
-                                <rect key="frame" x="480" y="550" width="120" height="50"/>
-                                <state key="normal" image="design_style_normal"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rH-YM-nQP" customClass="CustomButton" customModule="FashionDiy" customModuleProvider="target">
-                                <rect key="frame" x="120" y="550" width="120" height="50"/>
-                                <state key="normal" image="design_camera_normal"/>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="QzO-Jw-bH7" firstAttribute="top" secondItem="S38-kf-563" secondAttribute="bottom" constant="8" id="89U-3W-Iwj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6cy-Bo-bxg" secondAttribute="trailing" constant="-20" id="8bi-Fn-U9s"/>
                             <constraint firstItem="QzO-Jw-bH7" firstAttribute="leading" secondItem="Ae1-qS-wYV" secondAttribute="leadingMargin" id="9V5-q3-Fmy"/>
-                            <constraint firstItem="itR-SR-7li" firstAttribute="top" secondItem="j8R-x4-sRj" secondAttribute="bottom" id="BX5-Uf-cL6"/>
-                            <constraint firstItem="I3q-ze-MzM" firstAttribute="top" secondItem="JAo-Pu-frt" secondAttribute="bottom" id="Bqw-Tr-Fjf"/>
-                            <constraint firstItem="7rH-YM-nQP" firstAttribute="leading" secondItem="itR-SR-7li" secondAttribute="trailing" id="CDN-y9-xjQ"/>
-                            <constraint firstItem="XyU-US-9g5" firstAttribute="height" secondItem="itR-SR-7li" secondAttribute="height" id="LX6-O9-gt0"/>
-                            <constraint firstItem="j8R-x4-sRj" firstAttribute="leading" secondItem="Ae1-qS-wYV" secondAttribute="leadingMargin" constant="-20" id="MAf-gW-WC0"/>
-                            <constraint firstItem="7rH-YM-nQP" firstAttribute="width" secondItem="itR-SR-7li" secondAttribute="width" id="N2L-Cs-zvl"/>
-                            <constraint firstItem="LsM-24-Di8" firstAttribute="width" secondItem="itR-SR-7li" secondAttribute="width" id="OTh-Ox-Bhn"/>
-                            <constraint firstItem="XyU-US-9g5" firstAttribute="leading" secondItem="LsM-24-Di8" secondAttribute="trailing" id="OZN-JQ-0py"/>
-                            <constraint firstItem="LsM-24-Di8" firstAttribute="top" secondItem="6cy-Bo-bxg" secondAttribute="bottom" constant="8" id="PKo-gt-X9C"/>
-                            <constraint firstItem="I3q-ze-MzM" firstAttribute="top" secondItem="XyU-US-9g5" secondAttribute="bottom" id="Til-kl-dWN"/>
-                            <constraint firstItem="LsM-24-Di8" firstAttribute="leading" secondItem="JAo-Pu-frt" secondAttribute="trailing" id="ZOA-me-9o2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uQt-Iy-GVH" secondAttribute="trailing" constant="-20" id="AbB-Km-4nW"/>
+                            <constraint firstItem="uQt-Iy-GVH" firstAttribute="leading" secondItem="Ae1-qS-wYV" secondAttribute="leadingMargin" constant="-20" id="Xlk-Xe-zlp"/>
+                            <constraint firstItem="I3q-ze-MzM" firstAttribute="top" secondItem="uQt-Iy-GVH" secondAttribute="bottom" id="YrN-FD-C2F"/>
                             <constraint firstItem="6cy-Bo-bxg" firstAttribute="leading" secondItem="Ae1-qS-wYV" secondAttribute="leadingMargin" constant="-20" id="aQJ-Zc-Ni5"/>
-                            <constraint firstItem="I3q-ze-MzM" firstAttribute="top" secondItem="itR-SR-7li" secondAttribute="bottom" id="dlL-pF-lCO"/>
-                            <constraint firstItem="LsM-24-Di8" firstAttribute="height" secondItem="itR-SR-7li" secondAttribute="height" id="eO3-Eb-3TH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QzO-Jw-bH7" secondAttribute="trailing" id="efQ-y5-oyq"/>
-                            <constraint firstItem="JAo-Pu-frt" firstAttribute="height" secondItem="itR-SR-7li" secondAttribute="height" id="g2P-YF-FSv"/>
-                            <constraint firstItem="JAo-Pu-frt" firstAttribute="width" secondItem="itR-SR-7li" secondAttribute="width" id="gcU-ye-Ug8"/>
-                            <constraint firstItem="I3q-ze-MzM" firstAttribute="top" secondItem="7rH-YM-nQP" secondAttribute="bottom" id="oNK-WR-UGa"/>
-                            <constraint firstItem="JAo-Pu-frt" firstAttribute="leading" secondItem="7rH-YM-nQP" secondAttribute="trailing" id="qvI-I5-I6O"/>
-                            <constraint firstItem="7rH-YM-nQP" firstAttribute="height" secondItem="itR-SR-7li" secondAttribute="height" id="rDH-8j-yh4"/>
-                            <constraint firstItem="itR-SR-7li" firstAttribute="leading" secondItem="Ae1-qS-wYV" secondAttribute="leadingMargin" constant="-20" id="sIT-u9-UQC"/>
-                            <constraint firstItem="I3q-ze-MzM" firstAttribute="top" secondItem="LsM-24-Di8" secondAttribute="bottom" id="tww-RU-YxT"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="j8R-x4-sRj" secondAttribute="trailing" constant="-20" id="wpQ-NJ-XfM"/>
+                            <constraint firstItem="uQt-Iy-GVH" firstAttribute="top" secondItem="6cy-Bo-bxg" secondAttribute="bottom" constant="8" id="rmc-wh-jfI"/>
                             <constraint firstItem="6cy-Bo-bxg" firstAttribute="top" secondItem="QzO-Jw-bH7" secondAttribute="bottom" constant="8" id="xK1-VC-NVI"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="XyU-US-9g5" secondAttribute="trailing" constant="-20" id="xVq-hF-PyD"/>
-                            <constraint firstItem="XyU-US-9g5" firstAttribute="width" secondItem="itR-SR-7li" secondAttribute="width" id="y5k-ab-FE5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="设计页" id="Xny-Yd-lZ4">
@@ -333,11 +291,6 @@
                     <connections>
                         <outlet property="FrontDesignImage" destination="3kY-YA-32A" id="GzJ-cY-oyp"/>
                         <outlet property="backDesignImage" destination="Y1w-2k-8Id" id="i6A-KA-d0o"/>
-                        <outlet property="modelButton" destination="itR-SR-7li" id="hlj-vp-vmu"/>
-                        <outlet property="patternButton" destination="LsM-24-Di8" id="8da-7p-9XD"/>
-                        <outlet property="styleButton" destination="XyU-US-9g5" id="4lD-2d-tYa"/>
-                        <outlet property="takePicButton" destination="7rH-YM-nQP" id="KXz-fa-2VT"/>
-                        <outlet property="wordButton" destination="JAo-Pu-frt" id="UkV-yo-PaB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8hT-VB-Tck" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -358,10 +311,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lz7-WX-Oix" customClass="BottomChooseView" customModule="FashionDiy" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="500" width="600" height="100"/>
+                                <rect key="frame" x="0.0" y="540" width="600" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="v1Z-xA-n3V"/>
+                                    <constraint firstAttribute="height" constant="60" id="v1Z-xA-n3V"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -375,7 +328,7 @@
                     <navigationItem key="navigationItem" title="女装设计页" id="Alt-9F-yxb">
                         <barButtonItem key="leftBarButtonItem" title="返回" id="VYz-6O-tgq">
                             <connections>
-                                <segue destination="uYZ-6U-Iwy" kind="unwind" unwindAction="backToHome:" id="MpT-Z9-zm8"/>
+                                <segue destination="uYZ-6U-Iwy" kind="unwind" unwindAction="backToHome:" id="u4I-Zy-Vwl"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -444,13 +397,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="design_camera_normal" width="65" height="50"/>
-        <image name="design_model_normal" width="65" height="50"/>
-        <image name="design_pattern_normal" width="65" height="50"/>
         <image name="design_source_cloth_white_negative" width="639" height="724"/>
         <image name="design_source_cloth_white_positive" width="640" height="708"/>
-        <image name="design_style_normal" width="65" height="50"/>
-        <image name="design_word_normal" width="65" height="50"/>
         <image name="全民diy" width="276" height="63"/>
         <image name="女装" width="90" height="93"/>
         <image name="情侣装" width="89" height="93"/>

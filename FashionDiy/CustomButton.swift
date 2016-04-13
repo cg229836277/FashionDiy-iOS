@@ -15,29 +15,8 @@ class CustomButton : UIButton {
     }
     
     func setImageAndTitle(){
-        self.imageView?.contentMode = .ScaleAspectFit   // 设置图片显示的模式  居中
-//        self.titleLabel?.textAlignment = .Center  // 文本文字居中显示
-//        self.titleLabel?.font = UIFont.systemFontOfSize(TITLE_FONT) //文本文字默认大小
-//        self.setTitleColor(UIColor.lightGrayColor(), forState: .Normal)  // 文本文字默认颜色
+        self.imageView?.contentMode = .ScaleAspectFill   // 设置图片显示的模式  居中
     }
-    
-    
-    
-    /// 重写highlighted 状态
-    
-//    override var  highlighted : Bool {
-//    set{
-//    
-//    }
-//    get{
-//    
-//    
-//    return false
-//    }
-//    
-//    }
-    
-    
     
     override func imageRectForContentRect(contentRect: CGRect) -> CGRect {
         let imageX:CGFloat = 0
@@ -49,10 +28,10 @@ class CustomButton : UIButton {
     
     override func titleRectForContentRect(contentRect: CGRect) -> CGRect {
         let titleX:CGFloat = 0
-        let titleY:CGFloat = self.frame.size.height * IMAGE_RATIO
+        let titleY:CGFloat = 0
     
         let titleW:CGFloat = 0
-        let titleH:CGFloat = self.frame.size.height * (1.0 - IMAGE_RATIO)
+        let titleH:CGFloat = 0
     
         return CGRectMake(titleX, titleY, titleW, titleH)
     }

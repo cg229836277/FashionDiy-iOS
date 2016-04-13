@@ -21,41 +21,31 @@ class BottomChooseView: UIView {
     
     @IBOutlet weak var styleButton: CustomButton!
     
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupSubview()
-    }
-    
-    convenience init() {
-        self.init(frame: CGRect.zero)
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupSubview()
     }
-    
-    override func layoutSubviews() {
-        view.frame = self.bounds
-        let percentCGRect = CGRect(x: 0, y: 0, width: bounds.width / 5, height: 60)
-//        modelButton.bounds = percentCGRect
-//        photoButton.bounds = percentCGRect
-//        wordButton.bounds = percentCGRect
-//        iconButton.bounds = percentCGRect
-//        styleButton.bounds = percentCGRect
-    }
+
     
     func loadViewFromXib() -> UIView{
         let bundle = NSBundle(forClass: self.dynamicType)
         let xib = UINib(nibName: String(self.dynamicType), bundle: bundle)
-        let view = xib.instantiateWithOwner(self, options: nil)[0] as! UIView
+        let view = xib.instantiateWithOwner(self, options: nil).first as! UIView
         return view
     }
     
     func setupSubview(){
         view = loadViewFromXib()
-        
+        view.frame = bounds
         view.autoresizingMask = [UIViewAutoresizing.FlexibleWidth , UIViewAutoresizing.FlexibleHeight]
+        view.translatesAutoresizingMaskIntoConstraints = true
         addSubview(view)
     }
 
