@@ -36,6 +36,14 @@ class ViewController: UIViewController{
         self.navigationController?.navigationBarHidden = true
         self.navigationController?.navigationBar.translucent = true
     }
+    
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return [UIInterfaceOrientationMask.Portrait,UIInterfaceOrientationMask.PortraitUpsideDown]
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

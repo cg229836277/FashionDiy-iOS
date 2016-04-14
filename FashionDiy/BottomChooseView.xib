@@ -20,10 +20,6 @@
             <rect key="frame" x="0.0" y="0.0" width="348" height="140"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Me8-se-ase">
-                    <rect key="frame" x="0.0" y="0.0" width="348" height="80"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0yD-B9-e6L">
                     <rect key="frame" x="0.0" y="80" width="348" height="60"/>
                     <subviews>
@@ -73,6 +69,10 @@
                         <constraint firstItem="kip-qI-LWr" firstAttribute="leading" secondItem="M0G-HU-loP" secondAttribute="trailing" id="yeU-w3-Wk0"/>
                     </constraints>
                 </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Me8-se-ase">
+                    <rect key="frame" x="0.0" y="0.0" width="348" height="80"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>

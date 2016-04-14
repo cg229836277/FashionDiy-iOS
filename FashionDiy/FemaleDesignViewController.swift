@@ -16,6 +16,14 @@ class FemaleDesignViewController: UIViewController {
         self.navigationController?.navigationBarHidden = false
         self.navigationController?.navigationBar.translucent = false
     }
+    
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return [UIInterfaceOrientationMask.Portrait,UIInterfaceOrientationMask.PortraitUpsideDown]
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

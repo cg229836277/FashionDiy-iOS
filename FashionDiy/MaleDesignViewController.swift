@@ -36,6 +36,13 @@ class MaleDesignViewController: UIViewController {
         }
     }
     
+    override func shouldAutorotate() -> Bool {
+        return true
+    }
+    
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return [UIInterfaceOrientationMask.Portrait,UIInterfaceOrientationMask.PortraitUpsideDown]
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

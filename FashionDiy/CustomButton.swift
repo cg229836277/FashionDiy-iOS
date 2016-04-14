@@ -15,7 +15,11 @@ class CustomButton : UIButton {
     }
     
     func setImageAndTitle(){
-        self.imageView?.contentMode = .ScaleAspectFill   // 设置图片显示的模式  居中
+        self.titleLabel?.text = ""
+    }
+    
+    func setImageContentMode(mode mode:UIViewContentMode){
+        self.imageView?.contentMode = mode  // 设置图片显示的模式
     }
     
     override func imageRectForContentRect(contentRect: CGRect) -> CGRect {

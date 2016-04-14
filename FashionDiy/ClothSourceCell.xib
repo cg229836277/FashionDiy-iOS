@@ -3,56 +3,79 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ClothSourceCell" customModule="FashionDiy" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
-            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSx-Wc-G9f" customClass="CustomButton" customModule="FashionDiy" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCJ-bP-6fH" customClass="CustomButton" customModule="FashionDiy" customModuleProvider="target">
-                    <rect key="frame" x="30" y="0.0" width="30" height="30"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYB-NW-xSP" customClass="CustomButton" customModule="FashionDiy" customModuleProvider="target">
-                    <rect key="frame" x="60" y="0.0" width="30" height="30"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sch-gG-pCv" customClass="CustomButton" customModule="FashionDiy" customModuleProvider="target">
-                    <rect key="frame" x="90" y="0.0" width="30" height="30"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WjI-S5-RSw" customClass="CustomButton" customModule="FashionDiy" customModuleProvider="target">
-                    <rect key="frame" x="120" y="0.0" width="30" height="30"/>
-                </button>
-            </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <constraints>
-                <constraint firstItem="XYB-NW-xSP" firstAttribute="width" secondItem="WSx-Wc-G9f" secondAttribute="width" id="741-Ig-Eps"/>
-                <constraint firstAttribute="bottom" secondItem="WSx-Wc-G9f" secondAttribute="bottom" id="8uq-Tf-lB4"/>
-                <constraint firstItem="WSx-Wc-G9f" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Cyg-fq-VoD"/>
-                <constraint firstItem="XYB-NW-xSP" firstAttribute="leading" secondItem="lCJ-bP-6fH" secondAttribute="trailing" id="Dl9-vc-fnU"/>
-                <constraint firstItem="WjI-S5-RSw" firstAttribute="width" secondItem="WSx-Wc-G9f" secondAttribute="width" id="EAT-7O-ngT"/>
-                <constraint firstItem="WSx-Wc-G9f" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="GHr-9z-v1Z"/>
-                <constraint firstItem="WjI-S5-RSw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Kpv-Qx-Wqs"/>
-                <constraint firstAttribute="bottom" secondItem="lCJ-bP-6fH" secondAttribute="bottom" id="LFN-0M-jpx"/>
-                <constraint firstItem="lCJ-bP-6fH" firstAttribute="width" secondItem="WSx-Wc-G9f" secondAttribute="width" id="Tes-Ce-7JF"/>
-                <constraint firstAttribute="bottom" secondItem="WjI-S5-RSw" secondAttribute="bottom" id="VTa-7O-4i9"/>
-                <constraint firstItem="lCJ-bP-6fH" firstAttribute="leading" secondItem="WSx-Wc-G9f" secondAttribute="trailing" id="deV-cG-Nqm"/>
-                <constraint firstItem="WjI-S5-RSw" firstAttribute="leading" secondItem="Sch-gG-pCv" secondAttribute="trailing" id="iLi-cp-vdh"/>
-                <constraint firstItem="XYB-NW-xSP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="kBH-9G-JrX"/>
-                <constraint firstItem="Sch-gG-pCv" firstAttribute="leading" secondItem="XYB-NW-xSP" secondAttribute="trailing" id="oA0-CX-UZo"/>
-                <constraint firstItem="Sch-gG-pCv" firstAttribute="width" secondItem="WSx-Wc-G9f" secondAttribute="width" id="oxm-Sv-7vj"/>
-                <constraint firstAttribute="bottom" secondItem="Sch-gG-pCv" secondAttribute="bottom" id="qgp-h8-se6"/>
-                <constraint firstItem="Sch-gG-pCv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rbX-u4-G1r"/>
-                <constraint firstAttribute="bottom" secondItem="XYB-NW-xSP" secondAttribute="bottom" id="teM-ch-aUm"/>
-                <constraint firstItem="lCJ-bP-6fH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="tj0-Xe-zRk"/>
-                <constraint firstAttribute="trailing" secondItem="WjI-S5-RSw" secondAttribute="trailing" id="wgQ-Ta-mKO"/>
-            </constraints>
-            <nil key="simulatedStatusBarMetrics"/>
-            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="597" y="367"/>
-        </view>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cloth_item_cell" rowHeight="97" id="kKZ-z2-i57" customClass="ClothSourceCell" customModule="FashionDiy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kKZ-z2-i57" id="Fjv-co-R6p">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ymz-QK-Sfg" customClass="CustomButton" customModule="FashionDiy" customModuleProvider="target">
+                        <rect key="frame" x="85" y="6" width="30" height="30"/>
+                        <state key="normal" image="design_source_cloth_blue_negative"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oop-sc-cNs" customClass="CustomButton" customModule="FashionDiy" customModuleProvider="target">
+                        <rect key="frame" x="145" y="6" width="30" height="30"/>
+                        <state key="normal" image="design_source_cloth_blue_positive"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jlr-AO-BsJ" customClass="CustomButton" customModule="FashionDiy" customModuleProvider="target">
+                        <rect key="frame" x="206" y="6" width="30" height="30"/>
+                        <state key="normal" image="design_source_cloth_green_negative"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPz-Hy-U0P" customClass="CustomButton" customModule="FashionDiy" customModuleProvider="target">
+                        <rect key="frame" x="267" y="6" width="30" height="30"/>
+                        <state key="normal" image="design_source_cloth_red_negative"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IkT-7s-PSo" customClass="CustomButton" customModule="FashionDiy" customModuleProvider="target">
+                        <rect key="frame" x="24" y="7" width="30" height="30"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <state key="normal" image="design_source_cloth_white_negative"/>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="Ymz-QK-Sfg" firstAttribute="leading" secondItem="IkT-7s-PSo" secondAttribute="trailing" id="2cV-cR-bOw"/>
+                    <constraint firstItem="IkT-7s-PSo" firstAttribute="top" secondItem="Fjv-co-R6p" secondAttribute="topMargin" id="8gg-n2-cUT"/>
+                    <constraint firstItem="Ymz-QK-Sfg" firstAttribute="width" secondItem="IkT-7s-PSo" secondAttribute="width" id="98T-xv-A3j"/>
+                    <constraint firstItem="Oop-sc-cNs" firstAttribute="bottom" secondItem="Fjv-co-R6p" secondAttribute="bottomMargin" id="9I1-xK-oFT"/>
+                    <constraint firstItem="Jlr-AO-BsJ" firstAttribute="width" secondItem="IkT-7s-PSo" secondAttribute="width" id="BhQ-PS-J2i"/>
+                    <constraint firstItem="Jlr-AO-BsJ" firstAttribute="leading" secondItem="Oop-sc-cNs" secondAttribute="trailing" id="EPj-qp-z0W"/>
+                    <constraint firstItem="Oop-sc-cNs" firstAttribute="top" secondItem="Fjv-co-R6p" secondAttribute="topMargin" id="NpW-qn-K5D"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Ymz-QK-Sfg" secondAttribute="bottom" id="OLi-ge-oJW"/>
+                    <constraint firstItem="Oop-sc-cNs" firstAttribute="width" secondItem="IkT-7s-PSo" secondAttribute="width" id="PR4-zK-Ytr"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="IkT-7s-PSo" secondAttribute="bottom" id="QPf-GN-Pao"/>
+                    <constraint firstItem="Jlr-AO-BsJ" firstAttribute="top" secondItem="Fjv-co-R6p" secondAttribute="topMargin" id="Qf4-fL-OiI"/>
+                    <constraint firstItem="Ymz-QK-Sfg" firstAttribute="top" secondItem="Fjv-co-R6p" secondAttribute="topMargin" id="RCV-hX-muk"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Jlr-AO-BsJ" secondAttribute="bottom" id="Vkb-Kl-Y6l"/>
+                    <constraint firstItem="rPz-Hy-U0P" firstAttribute="leading" secondItem="Jlr-AO-BsJ" secondAttribute="trailing" id="VpN-cU-tqY"/>
+                    <constraint firstItem="rPz-Hy-U0P" firstAttribute="width" secondItem="IkT-7s-PSo" secondAttribute="width" id="WOS-AM-Sfb"/>
+                    <constraint firstItem="IkT-7s-PSo" firstAttribute="leading" secondItem="Fjv-co-R6p" secondAttribute="leadingMargin" id="YFk-gm-gEp"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="rPz-Hy-U0P" secondAttribute="bottom" id="hoj-rr-xqD"/>
+                    <constraint firstItem="rPz-Hy-U0P" firstAttribute="top" secondItem="Fjv-co-R6p" secondAttribute="topMargin" id="oKR-aj-LlW"/>
+                    <constraint firstItem="Oop-sc-cNs" firstAttribute="leading" secondItem="Ymz-QK-Sfg" secondAttribute="trailing" id="rgq-4G-Anh"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="rPz-Hy-U0P" secondAttribute="trailing" id="xHU-7L-ha7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="fifthButton" destination="rPz-Hy-U0P" id="D7A-EG-XRY"/>
+                <outlet property="firstButton" destination="IkT-7s-PSo" id="uxE-wD-MtM"/>
+                <outlet property="fourthButton" destination="Jlr-AO-BsJ" id="uyA-8o-xRf"/>
+                <outlet property="secondButton" destination="Ymz-QK-Sfg" id="P7n-Am-zfX"/>
+                <outlet property="thirdButton" destination="Oop-sc-cNs" id="aiu-Rr-IBX"/>
+            </connections>
+            <point key="canvasLocation" x="657" y="318.5"/>
+        </tableViewCell>
     </objects>
+    <resources>
+        <image name="design_source_cloth_blue_negative" width="639" height="724"/>
+        <image name="design_source_cloth_blue_positive" width="640" height="708"/>
+        <image name="design_source_cloth_green_negative" width="639" height="724"/>
+        <image name="design_source_cloth_red_negative" width="639" height="724"/>
+        <image name="design_source_cloth_white_negative" width="639" height="724"/>
+    </resources>
 </document>
