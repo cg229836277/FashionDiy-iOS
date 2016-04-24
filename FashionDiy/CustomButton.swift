@@ -6,16 +6,20 @@ class CustomButton : UIButton {
     let TITLE_FONT:CGFloat = 0   // 设置按钮标题字体默认的大小
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.setImageAndTitle()
+        self.setTitle()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.setImageAndTitle()
+        self.setTitle()
     }
     
-    func setImageAndTitle(){
+    func setTitle(){
         self.titleLabel?.text = ""
+    }
+    
+    func setImage(image image:UIImage){
+        super.setImage(image, forState: UIControlState.Normal)
     }
     
     func setImageContentMode(mode mode:UIViewContentMode){

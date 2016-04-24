@@ -12,29 +12,24 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kKZ-z2-i57" id="Fjv-co-R6p">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="42"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IkT-7s-PSo" customClass="CustomButton" customModule="FashionDiy" customModuleProvider="target">
+                        <rect key="frame" x="8" y="8" width="61" height="26"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ymz-QK-Sfg" customClass="CustomButton" customModule="FashionDiy" customModuleProvider="target">
-                        <rect key="frame" x="85" y="6" width="30" height="30"/>
-                        <state key="normal" image="design_source_cloth_blue_negative"/>
+                        <rect key="frame" x="69" y="8" width="61" height="26"/>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oop-sc-cNs" customClass="CustomButton" customModule="FashionDiy" customModuleProvider="target">
-                        <rect key="frame" x="145" y="6" width="30" height="30"/>
-                        <state key="normal" image="design_source_cloth_blue_positive"/>
+                        <rect key="frame" x="130" y="8" width="60" height="26"/>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jlr-AO-BsJ" customClass="CustomButton" customModule="FashionDiy" customModuleProvider="target">
-                        <rect key="frame" x="206" y="6" width="30" height="30"/>
-                        <state key="normal" image="design_source_cloth_green_negative"/>
+                        <rect key="frame" x="190" y="8" width="61" height="26"/>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPz-Hy-U0P" customClass="CustomButton" customModule="FashionDiy" customModuleProvider="target">
-                        <rect key="frame" x="267" y="6" width="30" height="30"/>
-                        <state key="normal" image="design_source_cloth_red_negative"/>
-                    </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IkT-7s-PSo" customClass="CustomButton" customModule="FashionDiy" customModuleProvider="target">
-                        <rect key="frame" x="24" y="7" width="30" height="30"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <state key="normal" image="design_source_cloth_white_negative"/>
+                        <rect key="frame" x="251" y="8" width="61" height="26"/>
                     </button>
                 </subviews>
                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -62,20 +57,13 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="fifthButton" destination="rPz-Hy-U0P" id="D7A-EG-XRY"/>
-                <outlet property="firstButton" destination="IkT-7s-PSo" id="uxE-wD-MtM"/>
-                <outlet property="fourthButton" destination="Jlr-AO-BsJ" id="uyA-8o-xRf"/>
-                <outlet property="secondButton" destination="Ymz-QK-Sfg" id="P7n-Am-zfX"/>
-                <outlet property="thirdButton" destination="Oop-sc-cNs" id="aiu-Rr-IBX"/>
+                <outlet property="fiveButton" destination="rPz-Hy-U0P" id="A7O-F8-apd"/>
+                <outlet property="fourButton" destination="Jlr-AO-BsJ" id="vFo-Gn-bKQ"/>
+                <outlet property="oneButton" destination="IkT-7s-PSo" id="sJz-Xc-1Zx"/>
+                <outlet property="threeButton" destination="Oop-sc-cNs" id="OCz-tW-GzF"/>
+                <outlet property="twoButton" destination="Ymz-QK-Sfg" id="J3h-Y5-E0K"/>
             </connections>
             <point key="canvasLocation" x="657" y="318.5"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="design_source_cloth_blue_negative" width="639" height="724"/>
-        <image name="design_source_cloth_blue_positive" width="640" height="708"/>
-        <image name="design_source_cloth_green_negative" width="639" height="724"/>
-        <image name="design_source_cloth_red_negative" width="639" height="724"/>
-        <image name="design_source_cloth_white_negative" width="639" height="724"/>
-    </resources>
 </document>

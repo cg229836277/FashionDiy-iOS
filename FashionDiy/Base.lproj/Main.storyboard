@@ -236,13 +236,13 @@
                                     <action selector="backAndFrontSelected:" destination="amD-CO-uML" eventType="valueChanged" id="TS8-CG-vY0"/>
                                 </connections>
                             </segmentedControl>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6cy-Bo-bxg" userLabel="DesignDetail">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6cy-Bo-bxg" userLabel="DesignDetail">
                                 <rect key="frame" x="0.0" y="108" width="600" height="424"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="design_source_cloth_white_negative" translatesAutoresizingMaskIntoConstraints="NO" id="Y1w-2k-8Id" userLabel="BackDesign">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="design_source_cloth_white_negative" translatesAutoresizingMaskIntoConstraints="NO" id="Y1w-2k-8Id" userLabel="BackDesign">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="424"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="design_source_cloth_white_positive" translatesAutoresizingMaskIntoConstraints="NO" id="3kY-YA-32A" userLabel="FrontDesign">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="design_source_cloth_white_positive" translatesAutoresizingMaskIntoConstraints="NO" id="3kY-YA-32A" userLabel="FrontDesign">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="424"/>
                                     </imageView>
                                 </subviews>
@@ -258,7 +258,7 @@
                                     <constraint firstItem="Y1w-2k-8Id" firstAttribute="leading" secondItem="6cy-Bo-bxg" secondAttribute="leading" id="z1P-dV-f5j"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uQt-Iy-GVH" customClass="BottomChooseView" customModule="FashionDiy" customModuleProvider="target">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uQt-Iy-GVH" customClass="BottomChooseView" customModule="FashionDiy" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="540" width="600" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -291,6 +291,7 @@
                     <connections>
                         <outlet property="FrontDesignImage" destination="3kY-YA-32A" id="GzJ-cY-oyp"/>
                         <outlet property="backDesignImage" destination="Y1w-2k-8Id" id="i6A-KA-d0o"/>
+                        <outlet property="maleBottomDesignView" destination="uQt-Iy-GVH" id="8Dz-3x-4Ag"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8hT-VB-Tck" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -310,7 +311,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lz7-WX-Oix" customClass="BottomChooseView" customModule="FashionDiy" customModuleProvider="target">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lz7-WX-Oix" customClass="BottomChooseView" customModule="FashionDiy" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="540" width="600" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -397,8 +398,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="design_source_cloth_white_negative" width="639" height="724"/>
-        <image name="design_source_cloth_white_positive" width="640" height="708"/>
+        <image name="design_source_cloth_white_negative" width="319" height="362"/>
+        <image name="design_source_cloth_white_positive" width="320" height="354"/>
         <image name="全民diy" width="276" height="63"/>
         <image name="女装" width="90" height="93"/>
         <image name="情侣装" width="89" height="93"/>

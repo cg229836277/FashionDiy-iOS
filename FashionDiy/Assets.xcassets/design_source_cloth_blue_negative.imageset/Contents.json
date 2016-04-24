@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "design_source_cloth_blue_negative.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "design_source_cloth_blue_negative.png",
       "scale" : "2x"
     },
     {
