@@ -21,8 +21,6 @@ class BottomChooseView: UIView {
     
     @IBOutlet weak var styleButton: CustomButton!
     
-    @IBOutlet weak var clothTableView: UITableView!
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupSubview()
@@ -31,14 +29,6 @@ class BottomChooseView: UIView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupSubview()
-    }
-
-    
-    func loadViewFromXib() -> UIView{
-        let bundle = NSBundle(forClass: self.dynamicType)
-        let xib = UINib(nibName: String(self.dynamicType), bundle: bundle)
-        let view = xib.instantiateWithOwner(self, options: nil).first as! UIView
-        return view
     }
     
     func setupSubview(){
@@ -54,7 +44,14 @@ class BottomChooseView: UIView {
         styleButton.setImageContentMode(mode: UIViewContentMode.ScaleAspectFill)
         
         addSubview(view)
-    }    
+    }
+    
+    func loadViewFromXib() -> UIView{
+        let bundle = NSBundle(forClass: self.dynamicType)
+        let xib = UINib(nibName: String(self.dynamicType), bundle: bundle)
+        let view = xib.instantiateWithOwner(self, options: nil).first as! UIView
+        return view
+    }
     
 
 }

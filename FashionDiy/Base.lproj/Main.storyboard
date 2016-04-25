@@ -236,33 +236,46 @@
                                     <action selector="backAndFrontSelected:" destination="amD-CO-uML" eventType="valueChanged" id="TS8-CG-vY0"/>
                                 </connections>
                             </segmentedControl>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6cy-Bo-bxg" userLabel="DesignDetail">
-                                <rect key="frame" x="0.0" y="108" width="600" height="424"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6cy-Bo-bxg" userLabel="DesignDetail">
+                                <rect key="frame" x="0.0" y="108" width="600" height="432"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="design_source_cloth_white_negative" translatesAutoresizingMaskIntoConstraints="NO" id="Y1w-2k-8Id" userLabel="BackDesign">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="424"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="design_source_cloth_white_negative" translatesAutoresizingMaskIntoConstraints="NO" id="3j0-OP-kiI" userLabel="Back">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="432"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="design_source_cloth_white_positive" translatesAutoresizingMaskIntoConstraints="NO" id="3kY-YA-32A" userLabel="FrontDesign">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="424"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="design_source_cloth_white_positive" translatesAutoresizingMaskIntoConstraints="NO" id="OmE-Cq-sxR" userLabel="Front">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="432"/>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </imageView>
+                                    <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Mbm-MC-Tam">
+                                        <rect key="frame" x="0.0" y="332" width="600" height="100"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="B4A-vf-2pO"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="ZHx-wP-J4y"/>
+                                        </constraints>
+                                    </tableView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.78431372549019607" green="0.88627450980392153" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="3kY-YA-32A" secondAttribute="trailing" id="42t-W3-HrD"/>
-                                    <constraint firstItem="Y1w-2k-8Id" firstAttribute="top" secondItem="6cy-Bo-bxg" secondAttribute="top" id="Myc-bi-PR4"/>
-                                    <constraint firstItem="3kY-YA-32A" firstAttribute="leading" secondItem="6cy-Bo-bxg" secondAttribute="leading" id="OVs-5i-I2J"/>
-                                    <constraint firstAttribute="bottom" secondItem="3kY-YA-32A" secondAttribute="bottom" id="Y1i-Wv-MvJ"/>
-                                    <constraint firstAttribute="bottom" secondItem="Y1w-2k-8Id" secondAttribute="bottom" id="bqz-Sa-QS7"/>
-                                    <constraint firstAttribute="trailing" secondItem="Y1w-2k-8Id" secondAttribute="trailing" id="gEj-Lq-DpZ"/>
-                                    <constraint firstItem="3kY-YA-32A" firstAttribute="top" secondItem="6cy-Bo-bxg" secondAttribute="top" id="rNl-XN-XiW"/>
-                                    <constraint firstItem="Y1w-2k-8Id" firstAttribute="leading" secondItem="6cy-Bo-bxg" secondAttribute="leading" id="z1P-dV-f5j"/>
+                                    <constraint firstItem="OmE-Cq-sxR" firstAttribute="leading" secondItem="6cy-Bo-bxg" secondAttribute="leading" id="1yb-Io-W43"/>
+                                    <constraint firstAttribute="trailing" secondItem="Mbm-MC-Tam" secondAttribute="trailing" id="5FZ-lx-ZXc"/>
+                                    <constraint firstAttribute="bottom" secondItem="OmE-Cq-sxR" secondAttribute="bottom" id="7gd-k8-kkD"/>
+                                    <constraint firstAttribute="bottom" secondItem="3j0-OP-kiI" secondAttribute="bottom" id="Ch7-X4-fcc"/>
+                                    <constraint firstAttribute="trailing" secondItem="3j0-OP-kiI" secondAttribute="trailing" id="UPm-UF-fnC"/>
+                                    <constraint firstAttribute="bottom" secondItem="Mbm-MC-Tam" secondAttribute="bottom" id="WLB-Va-i5j"/>
+                                    <constraint firstItem="OmE-Cq-sxR" firstAttribute="top" secondItem="6cy-Bo-bxg" secondAttribute="top" id="fTM-Mz-o1m"/>
+                                    <constraint firstItem="Mbm-MC-Tam" firstAttribute="leading" secondItem="6cy-Bo-bxg" secondAttribute="leading" id="j99-Y8-QjI"/>
+                                    <constraint firstItem="3j0-OP-kiI" firstAttribute="leading" secondItem="6cy-Bo-bxg" secondAttribute="leading" id="jPY-bv-XT0"/>
+                                    <constraint firstItem="3j0-OP-kiI" firstAttribute="top" secondItem="6cy-Bo-bxg" secondAttribute="top" id="lEb-l7-0rZ"/>
+                                    <constraint firstItem="Mbm-MC-Tam" firstAttribute="leading" secondItem="6cy-Bo-bxg" secondAttribute="leading" id="ol6-1t-EqC"/>
+                                    <constraint firstAttribute="trailing" secondItem="OmE-Cq-sxR" secondAttribute="trailing" id="yED-ZG-Puq"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uQt-Iy-GVH" customClass="BottomChooseView" customModule="FashionDiy" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uQt-Iy-GVH" customClass="BottomChooseView" customModule="FashionDiy" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="540" width="600" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="140" id="3rx-6c-o9i"/>
+                                    <constraint firstAttribute="height" constant="60" id="3rx-6c-o9i"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -276,7 +289,7 @@
                             <constraint firstItem="I3q-ze-MzM" firstAttribute="top" secondItem="uQt-Iy-GVH" secondAttribute="bottom" id="YrN-FD-C2F"/>
                             <constraint firstItem="6cy-Bo-bxg" firstAttribute="leading" secondItem="Ae1-qS-wYV" secondAttribute="leadingMargin" constant="-20" id="aQJ-Zc-Ni5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QzO-Jw-bH7" secondAttribute="trailing" id="efQ-y5-oyq"/>
-                            <constraint firstItem="uQt-Iy-GVH" firstAttribute="top" secondItem="6cy-Bo-bxg" secondAttribute="bottom" constant="8" id="rmc-wh-jfI"/>
+                            <constraint firstItem="uQt-Iy-GVH" firstAttribute="top" secondItem="6cy-Bo-bxg" secondAttribute="bottom" id="rmc-wh-jfI"/>
                             <constraint firstItem="6cy-Bo-bxg" firstAttribute="top" secondItem="QzO-Jw-bH7" secondAttribute="bottom" constant="8" id="xK1-VC-NVI"/>
                         </constraints>
                     </view>
@@ -289,8 +302,9 @@
                     </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
-                        <outlet property="FrontDesignImage" destination="3kY-YA-32A" id="GzJ-cY-oyp"/>
-                        <outlet property="backDesignImage" destination="Y1w-2k-8Id" id="i6A-KA-d0o"/>
+                        <outlet property="backImageView" destination="3j0-OP-kiI" id="xFD-b6-KcR"/>
+                        <outlet property="contentTabelView" destination="Mbm-MC-Tam" id="BFq-xz-5cN"/>
+                        <outlet property="frontImageView" destination="OmE-Cq-sxR" id="cID-93-mXt"/>
                         <outlet property="maleBottomDesignView" destination="uQt-Iy-GVH" id="8Dz-3x-4Ag"/>
                     </connections>
                 </viewController>

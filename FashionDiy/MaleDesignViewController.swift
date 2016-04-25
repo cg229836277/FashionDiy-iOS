@@ -10,9 +10,10 @@ import UIKit
 
 class MaleDesignViewController: UIViewController , UITableViewDelegate , UITableViewDataSource{
     
-    @IBOutlet weak var backDesignImage: UIImageView!
+    @IBOutlet weak var frontImageView: UIImageView!
+    @IBOutlet weak var backImageView: UIImageView!
+    @IBOutlet weak var contentTabelView: UITableView!
     
-    @IBOutlet weak var FrontDesignImage: UIImageView!
     
     @IBOutlet weak var maleBottomDesignView: BottomChooseView!
     
@@ -26,24 +27,29 @@ class MaleDesignViewController: UIViewController , UITableViewDelegate , UITable
         self.navigationController?.navigationBar.translucent = false
         
         initTableView()
+        initButtonClickEvent()
     }
     
     func initTableView(){
-        maleBottomDesignView.clothTableView.delegate = self
-        maleBottomDesignView.clothTableView.dataSource = self
+        contentTabelView.delegate = self
+        contentTabelView.dataSource = self
         let cellNib = UINib(nibName: "ClothSourceCell", bundle: nil)
-        maleBottomDesignView.clothTableView.registerNib(cellNib, forCellReuseIdentifier: "cloth_item_cell")
+        contentTabelView.registerNib(cellNib, forCellReuseIdentifier: "cloth_item_cell")
         malePositiveSourceCount = clothSource.malePositiveSources.count
+    }
+    
+    func initButtonClickEvent(){
+        maleBottomDesignView.styleButton.addTarget(self, action: "styleButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
     }
     
     @IBAction func backAndFrontSelected(sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex{
         case 0:
-            backDesignImage.hidden = true
-            FrontDesignImage.hidden = false
+            backImageView.hidden = true
+            frontImageView.hidden = false
         case 1:
-            backDesignImage.hidden = false
-            FrontDesignImage.hidden = true
+            backImageView.hidden = false
+            frontImageView.hidden = true
         default:
             break;
         }
@@ -70,41 +76,37 @@ class MaleDesignViewController: UIViewController , UITableViewDelegate , UITable
         let fourthCount = row * 5 + 3
         let fifthCount = row * 5 + 4
         
-        print("firstCount = \(firstCount)")
+        //print("firstCount = \(firstCount)")
         
         if !isOverArray(firstCount) {
-            let imageName:String = clothSource.malePositiveSources[firstCount]
-            print("imagename is \(imageName)")
-            cell.oneButton.setImageContentMode(mode: UIViewContentMode.ScaleAspectFit)
-            let image = UIImage(named: imageName)
-            if image != nil{
-                cell.oneButton.setImage(image: image!)
-            }else{
-                print("image1 is nil")
-            }
+            initTableviewCell(cell.oneButton, index: firstCount)
         }
         
         if !isOverArray(secondCount) {
-            let imageName:String = clothSource.malePositiveSources[secondCount]
-            print("imagename is \(imageName)")
-            cell.twoButton.setImageContentMode(mode: UIViewContentMode.ScaleAspectFit)
-            let image = UIImage(named: imageName)
-            if image != nil{
-                cell.twoButton.setImage(image: image!)
-            }else{
-                print("image2 is nil")
-            }
+            initTableviewCell(cell.twoButton, index: secondCount)
         }
-//        if !isOverArray(thirdCount) {
-//        cell.thirdButton.imageView?.image = UIImage(named: clothSource.malePositiveSources[thirdCount])
-//        }
-//        if !isOverArray(fourthCount) {
-//        cell.fourthButton.imageView?.image = UIImage(named: clothSource.malePositiveSources[fourthCount])
-//        }
-//        if !isOverArray(fifthCount) {
-//        cell.fifthButton.imageView?.image = UIImage(named: clothSource.malePositiveSources[fifthCount])
-//        }
+        if !isOverArray(thirdCount) {
+            initTableviewCell(cell.threeButton, index: thirdCount)
+        }
+        if !isOverArray(fourthCount) {
+            initTableviewCell(cell.fourButton, index: fourthCount)
+        }
+        if !isOverArray(fifthCount) {
+            initTableviewCell(cell.fiveButton, index: fifthCount)
+        }
         return cell
+    }
+    
+    func initTableviewCell(button:CustomButton ,index:Int){
+        let imageName:String = clothSource.malePositiveSources[index]
+        //print("imagename is \(imageName)")
+        button.setImageContentMode(mode: UIViewContentMode.ScaleAspectFit)
+        let image = UIImage(named: imageName)
+        if image != nil{
+            button.setImage(image: image!)
+        }else{
+            print("\(imageName) is nil")
+        }
     }
     
     func isOverArray(index : Int) -> Bool{
@@ -117,6 +119,17 @@ class MaleDesignViewController: UIViewController , UITableViewDelegate , UITable
     
     override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
         return [UIInterfaceOrientationMask.Portrait,UIInterfaceOrientationMask.PortraitUpsideDown]
+    }
+    
+    //款式按钮点击事件
+    @IBAction
+    func styleButtonClicked(sender:UIButton){
+        //print("choose style")
+        if contentTabelView.hidden{
+            contentTabelView.hidden = false
+        }else{
+            contentTabelView.hidden = true
+        }
     }
 
     override func didReceiveMemoryWarning() {

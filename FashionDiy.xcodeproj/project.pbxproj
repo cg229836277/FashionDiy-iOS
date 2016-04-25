@@ -7,37 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DB1642D61CBFDADF00A237C7 /* ClothSourceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1642D51CBFDADF00A237C7 /* ClothSourceCell.swift */; };
-		DB2ED9291CBE877500407793 /* ClothSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2ED9281CBE877500407793 /* ClothSource.swift */; };
-		DB4147031CBD3626008DC090 /* FemaleDesignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4147021CBD3626008DC090 /* FemaleDesignViewController.swift */; };
-		DB4436D91CB3F4FB00B280F4 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4436D81CB3F4FB00B280F4 /* CustomButton.swift */; };
-		DB656A8D1CABF16D008D774B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB656A8C1CABF16D008D774B /* AppDelegate.swift */; };
-		DB656A8F1CABF16D008D774B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB656A8E1CABF16D008D774B /* ViewController.swift */; };
-		DB656A921CABF16D008D774B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB656A901CABF16D008D774B /* Main.storyboard */; };
-		DB656A941CABF16D008D774B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB656A931CABF16D008D774B /* Assets.xcassets */; };
-		DB656A971CABF16D008D774B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB656A951CABF16D008D774B /* LaunchScreen.storyboard */; };
-		DB656A9F1CABFE92008D774B /* MaleDesignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB656A9E1CABFE92008D774B /* MaleDesignViewController.swift */; };
-		DB99EC2E1CBE8C9D00BF71D5 /* BottomChooseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB99EC2D1CBE8C9D00BF71D5 /* BottomChooseView.swift */; };
-		DB99EC321CBE91D800BF71D5 /* ClothSourceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB99EC311CBE91D800BF71D5 /* ClothSourceCell.xib */; };
-		DBEA67871CBA92030012432E /* BottomChooseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBEA67861CBA92030012432E /* BottomChooseView.xib */; };
+		DB503A2D1CCE50020090F3B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB503A1D1CCE50020090F3B1 /* AppDelegate.swift */; };
+		DB503A2E1CCE50020090F3B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB503A1E1CCE50020090F3B1 /* Assets.xcassets */; };
+		DB503A2F1CCE50020090F3B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB503A1F1CCE50020090F3B1 /* LaunchScreen.storyboard */; };
+		DB503A301CCE50020090F3B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB503A211CCE50020090F3B1 /* Main.storyboard */; };
+		DB503A311CCE50020090F3B1 /* BottomChooseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB503A231CCE50020090F3B1 /* BottomChooseView.swift */; };
+		DB503A321CCE50020090F3B1 /* BottomChooseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB503A241CCE50020090F3B1 /* BottomChooseView.xib */; };
+		DB503A331CCE50020090F3B1 /* ClothSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB503A251CCE50020090F3B1 /* ClothSource.swift */; };
+		DB503A341CCE50020090F3B1 /* ClothSourceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB503A261CCE50020090F3B1 /* ClothSourceCell.swift */; };
+		DB503A351CCE50020090F3B1 /* ClothSourceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB503A271CCE50020090F3B1 /* ClothSourceCell.xib */; };
+		DB503A361CCE50020090F3B1 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB503A281CCE50020090F3B1 /* CustomButton.swift */; };
+		DB503A371CCE50020090F3B1 /* FemaleDesignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB503A291CCE50020090F3B1 /* FemaleDesignViewController.swift */; };
+		DB503A381CCE50020090F3B1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB503A2A1CCE50020090F3B1 /* Info.plist */; };
+		DB503A391CCE50020090F3B1 /* MaleDesignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB503A2B1CCE50020090F3B1 /* MaleDesignViewController.swift */; };
+		DB503A3A1CCE50020090F3B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB503A2C1CCE50020090F3B1 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DB1642D51CBFDADF00A237C7 /* ClothSourceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClothSourceCell.swift; sourceTree = "<group>"; };
-		DB2ED9281CBE877500407793 /* ClothSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClothSource.swift; sourceTree = "<group>"; };
-		DB4147021CBD3626008DC090 /* FemaleDesignViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FemaleDesignViewController.swift; sourceTree = "<group>"; };
-		DB4436D81CB3F4FB00B280F4 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		DB503A1D1CCE50020090F3B1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DB503A1E1CCE50020090F3B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DB503A201CCE50020090F3B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DB503A221CCE50020090F3B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DB503A231CCE50020090F3B1 /* BottomChooseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BottomChooseView.swift; path = ../BottomChooseView.swift; sourceTree = "<group>"; };
+		DB503A241CCE50020090F3B1 /* BottomChooseView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BottomChooseView.xib; path = ../BottomChooseView.xib; sourceTree = "<group>"; };
+		DB503A251CCE50020090F3B1 /* ClothSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClothSource.swift; path = ../ClothSource.swift; sourceTree = "<group>"; };
+		DB503A261CCE50020090F3B1 /* ClothSourceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClothSourceCell.swift; path = ../ClothSourceCell.swift; sourceTree = "<group>"; };
+		DB503A271CCE50020090F3B1 /* ClothSourceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ClothSourceCell.xib; path = ../ClothSourceCell.xib; sourceTree = "<group>"; };
+		DB503A281CCE50020090F3B1 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomButton.swift; path = ../CustomButton.swift; sourceTree = "<group>"; };
+		DB503A291CCE50020090F3B1 /* FemaleDesignViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FemaleDesignViewController.swift; path = ../FemaleDesignViewController.swift; sourceTree = "<group>"; };
+		DB503A2A1CCE50020090F3B1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB503A2B1CCE50020090F3B1 /* MaleDesignViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MaleDesignViewController.swift; path = ../MaleDesignViewController.swift; sourceTree = "<group>"; };
+		DB503A2C1CCE50020090F3B1 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
 		DB656A891CABF16D008D774B /* FashionDiy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FashionDiy.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB656A8C1CABF16D008D774B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DB656A8E1CABF16D008D774B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DB656A911CABF16D008D774B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DB656A931CABF16D008D774B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DB656A961CABF16D008D774B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		DB656A981CABF16D008D774B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DB656A9E1CABFE92008D774B /* MaleDesignViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaleDesignViewController.swift; sourceTree = "<group>"; };
-		DB99EC2D1CBE8C9D00BF71D5 /* BottomChooseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomChooseView.swift; sourceTree = "<group>"; };
-		DB99EC311CBE91D800BF71D5 /* ClothSourceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClothSourceCell.xib; sourceTree = "<group>"; };
-		DBEA67861CBA92030012432E /* BottomChooseView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BottomChooseView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +52,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB503A1C1CCE50020090F3B1 /* FashionDiy */ = {
+			isa = PBXGroup;
+			children = (
+				DB503A3B1CCE50F00090F3B1 /* Controller */,
+				DB503A3C1CCE50F00090F3B1 /* CustomView */,
+				DB503A3D1CCE50F00090F3B1 /* CustomViewController */,
+				DB503A1D1CCE50020090F3B1 /* AppDelegate.swift */,
+				DB503A1E1CCE50020090F3B1 /* Assets.xcassets */,
+				DB503A1F1CCE50020090F3B1 /* LaunchScreen.storyboard */,
+				DB503A211CCE50020090F3B1 /* Main.storyboard */,
+				DB503A2A1CCE50020090F3B1 /* Info.plist */,
+			);
+			path = FashionDiy;
+			sourceTree = "<group>";
+		};
+		DB503A3B1CCE50F00090F3B1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DB503A291CCE50020090F3B1 /* FemaleDesignViewController.swift */,
+				DB503A2B1CCE50020090F3B1 /* MaleDesignViewController.swift */,
+				DB503A2C1CCE50020090F3B1 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DB503A3C1CCE50F00090F3B1 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				DB503A241CCE50020090F3B1 /* BottomChooseView.xib */,
+				DB503A271CCE50020090F3B1 /* ClothSourceCell.xib */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		DB503A3D1CCE50F00090F3B1 /* CustomViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DB503A231CCE50020090F3B1 /* BottomChooseView.swift */,
+				DB503A261CCE50020090F3B1 /* ClothSourceCell.swift */,
+				DB503A251CCE50020090F3B1 /* ClothSource.swift */,
+				DB503A281CCE50020090F3B1 /* CustomButton.swift */,
+			);
+			path = CustomViewController;
+			sourceTree = "<group>";
+		};
 		DB656A801CABF16D008D774B = {
 			isa = PBXGroup;
 			children = (
-				DB656A8B1CABF16D008D774B /* FashionDiy */,
+				DB503A1C1CCE50020090F3B1 /* FashionDiy */,
 				DB656A8A1CABF16D008D774B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,27 +111,6 @@
 				DB656A891CABF16D008D774B /* FashionDiy.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		DB656A8B1CABF16D008D774B /* FashionDiy */ = {
-			isa = PBXGroup;
-			children = (
-				DB656A8C1CABF16D008D774B /* AppDelegate.swift */,
-				DB656A8E1CABF16D008D774B /* ViewController.swift */,
-				DB656A9E1CABFE92008D774B /* MaleDesignViewController.swift */,
-				DB656A901CABF16D008D774B /* Main.storyboard */,
-				DB656A931CABF16D008D774B /* Assets.xcassets */,
-				DB656A951CABF16D008D774B /* LaunchScreen.storyboard */,
-				DB656A981CABF16D008D774B /* Info.plist */,
-				DB99EC311CBE91D800BF71D5 /* ClothSourceCell.xib */,
-				DB4436D81CB3F4FB00B280F4 /* CustomButton.swift */,
-				DBEA67861CBA92030012432E /* BottomChooseView.xib */,
-				DB99EC2D1CBE8C9D00BF71D5 /* BottomChooseView.swift */,
-				DB4147021CBD3626008DC090 /* FemaleDesignViewController.swift */,
-				DB2ED9281CBE877500407793 /* ClothSource.swift */,
-				DB1642D51CBFDADF00A237C7 /* ClothSourceCell.swift */,
-			);
-			path = FashionDiy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,11 +172,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB99EC321CBE91D800BF71D5 /* ClothSourceCell.xib in Resources */,
-				DB656A971CABF16D008D774B /* LaunchScreen.storyboard in Resources */,
-				DB656A941CABF16D008D774B /* Assets.xcassets in Resources */,
-				DBEA67871CBA92030012432E /* BottomChooseView.xib in Resources */,
-				DB656A921CABF16D008D774B /* Main.storyboard in Resources */,
+				DB503A301CCE50020090F3B1 /* Main.storyboard in Resources */,
+				DB503A2E1CCE50020090F3B1 /* Assets.xcassets in Resources */,
+				DB503A381CCE50020090F3B1 /* Info.plist in Resources */,
+				DB503A321CCE50020090F3B1 /* BottomChooseView.xib in Resources */,
+				DB503A351CCE50020090F3B1 /* ClothSourceCell.xib in Resources */,
+				DB503A2F1CCE50020090F3B1 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,34 +188,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB4436D91CB3F4FB00B280F4 /* CustomButton.swift in Sources */,
-				DB99EC2E1CBE8C9D00BF71D5 /* BottomChooseView.swift in Sources */,
-				DB656A8F1CABF16D008D774B /* ViewController.swift in Sources */,
-				DB1642D61CBFDADF00A237C7 /* ClothSourceCell.swift in Sources */,
-				DB656A9F1CABFE92008D774B /* MaleDesignViewController.swift in Sources */,
-				DB656A8D1CABF16D008D774B /* AppDelegate.swift in Sources */,
-				DB2ED9291CBE877500407793 /* ClothSource.swift in Sources */,
-				DB4147031CBD3626008DC090 /* FemaleDesignViewController.swift in Sources */,
+				DB503A311CCE50020090F3B1 /* BottomChooseView.swift in Sources */,
+				DB503A331CCE50020090F3B1 /* ClothSource.swift in Sources */,
+				DB503A2D1CCE50020090F3B1 /* AppDelegate.swift in Sources */,
+				DB503A391CCE50020090F3B1 /* MaleDesignViewController.swift in Sources */,
+				DB503A341CCE50020090F3B1 /* ClothSourceCell.swift in Sources */,
+				DB503A371CCE50020090F3B1 /* FemaleDesignViewController.swift in Sources */,
+				DB503A3A1CCE50020090F3B1 /* ViewController.swift in Sources */,
+				DB503A361CCE50020090F3B1 /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DB656A901CABF16D008D774B /* Main.storyboard */ = {
+		DB503A1F1CCE50020090F3B1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				DB656A911CABF16D008D774B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		DB656A951CABF16D008D774B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DB656A961CABF16D008D774B /* Base */,
+				DB503A201CCE50020090F3B1 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		DB503A211CCE50020090F3B1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB503A221CCE50020090F3B1 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
