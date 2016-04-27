@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MaleDesignViewController: UIViewController , UITableViewDelegate , UITableViewDataSource{
+class MaleDesignViewController: UIViewController , UITableViewDelegate , UITableViewDataSource {
     
     @IBOutlet weak var frontImageView: UIImageView!
     @IBOutlet weak var backImageView: UIImageView!
@@ -20,6 +20,8 @@ class MaleDesignViewController: UIViewController , UITableViewDelegate , UITable
     
     var clothSource = ClothSource()
     var malePositiveSourceCount = 0
+    
+    var isCellDelegateInit = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,6 +72,8 @@ class MaleDesignViewController: UIViewController , UITableViewDelegate , UITable
         let cell = tableView.dequeueReusableCellWithIdentifier("cloth_item_cell", forIndexPath: indexPath) as! ClothSourceCell
         let row = indexPath.row
         
+        print("invoke cell for row at index path")
+        
         let firstCount = row * 5 + 0
         let secondCount = row * 5 + 1
         let thirdCount = row * 5 + 2
@@ -79,19 +83,29 @@ class MaleDesignViewController: UIViewController , UITableViewDelegate , UITable
         //print("firstCount = \(firstCount)")
         
         if !isOverArray(firstCount) {
+            cell.oneButton.tag = row
+            cell.oneButton.addTarget(self, action: "oneButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
             initTableviewCell(cell.oneButton, index: firstCount)
         }
         
         if !isOverArray(secondCount) {
+            cell.twoButton.tag = row
+            cell.twoButton.addTarget(self, action: "twoButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
             initTableviewCell(cell.twoButton, index: secondCount)
         }
         if !isOverArray(thirdCount) {
+            cell.threeButton.tag = row
+            cell.threeButton.addTarget(self, action: "threeButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
             initTableviewCell(cell.threeButton, index: thirdCount)
         }
         if !isOverArray(fourthCount) {
+            cell.fourButton.tag = row
+            cell.fourButton.addTarget(self, action: "fourButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
             initTableviewCell(cell.fourButton, index: fourthCount)
         }
         if !isOverArray(fifthCount) {
+            cell.fiveButton.tag = row
+            cell.fiveButton.addTarget(self, action: "fiveButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
             initTableviewCell(cell.fiveButton, index: fifthCount)
         }
         return cell
@@ -111,6 +125,22 @@ class MaleDesignViewController: UIViewController , UITableViewDelegate , UITable
     
     func isOverArray(index : Int) -> Bool{
         return index >= malePositiveSourceCount ? true : false
+    }
+    
+    @IBAction func oneButtonClicked(sender:UIButton){
+        print("1button tag is \(sender.tag)")
+    }
+    @IBAction func twoButtonClicked(sender:UIButton){
+        print("2button tag is \(sender.tag)")
+    }
+    @IBAction func threeButtonClicked(sender:UIButton){
+        print("3button tag is \(sender.tag)")
+    }
+    @IBAction func fourButtonClicked(sender:UIButton){
+        print("4button tag is \(sender.tag)")
+    }
+    @IBAction func fiveButtonClicked(sender:UIButton){
+        print("5button tag is \(sender.tag)")
     }
     
     override func shouldAutorotate() -> Bool {

@@ -9,27 +9,55 @@
 import UIKit
 @IBDesignable
 class ClothSourceCell: UITableViewCell {
-
     @IBOutlet weak var oneButton: CustomButton!
     @IBOutlet weak var twoButton: CustomButton!
     @IBOutlet weak var threeButton: CustomButton!
     @IBOutlet weak var fourButton: CustomButton!
-    
     @IBOutlet weak var fiveButton: CustomButton!
+    
+    //var cellButtonDelagate:TableviewCellDelegate?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-//        firstButton.setImageContentMode(mode: UIViewContentMode.ScaleAspectFit)
-//        secondButton.setImageContentMode(mode: UIViewContentMode.ScaleAspectFit)
-//        thirdButton.setImageContentMode(mode: UIViewContentMode.ScaleAspectFit)
-//        fourthButton.setImageContentMode(mode: UIViewContentMode.ScaleAspectFit)
-//        fifthButton.setImageContentMode(mode: UIViewContentMode.ScaleAspectFit)
-//        self.imageView?.frame = CGRectMake(0, 0, 0, 0)
-//        self.detailTextLabel?.frame = CGRectMake(0, 0, 0, 0)
-//        self.textLabel?.frame = CGRectMake(0, 0, 0, 0)
+        //initButtonClickedEvent()
     }
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: UITableViewCellStyle.Default, reuseIdentifier: "cloth_item_cell")
+        //initButtonClickedEvent()
+    }
+    
+    func initButtonClickedEvent(){
+        oneButton.addTarget(self, action: "oneButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+        twoButton.addTarget(self, action: "twoButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+        threeButton.addTarget(self, action: "threeButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+        fourButton.addTarget(self, action: "fourButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+        fiveButton.addTarget(self, action: "fiveButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+    }
+    
+    @IBAction func oneButtonClicked(sender:UIButton){
+        sendClickedEvent(0 , sender: sender)
+    }
+    @IBAction func twoButtonClicked(sender:UIButton){
+        sendClickedEvent(1 , sender: sender)
+    }
+    @IBAction func threeButtonClicked(sender:UIButton){
+        sendClickedEvent(2 , sender: sender)
+    }
+    @IBAction func fourButtonClicked(sender:UIButton){
+        sendClickedEvent(3 , sender: sender)
+    }
+    @IBAction func fiveButtonClicked(sender:UIButton){
+        sendClickedEvent(4 , sender: sender)
+    }
+    
+    func sendClickedEvent(index:Int , sender:UIButton){
+//        if cellButtonDelagate != nil{
+//            cellButtonDelagate?.buttonIncellClicked(index , sender: sender)
+//        }
     }
 }
+
+//protocol TableviewCellDelegate{
+//    func buttonIncellClicked(index:Int , sender:UIButton)
+//}
