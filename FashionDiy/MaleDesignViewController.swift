@@ -21,10 +21,21 @@ class MaleDesignViewController: UIViewController , UITableViewDelegate , UITable
     var clothSource = ClothSource()
     var malePositiveSourceCount = 0
     
-    var isCellDelegateInit = false
+    let BUTTONS_PER_CELL = 5
+    
+    var currentClothData:[String]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        currentClothData = clothSource.malePositiveSources
+        malePositiveSourceCount = clothSource.malePositiveSources.count
+        
+        frontImageView.userInteractionEnabled = true
+        backImageView.userInteractionEnabled = true
+        frontImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "designClothClicked:"))
+        backImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "designClothClicked:"))
+        
+        print("source count \(malePositiveSourceCount)")
         self.navigationController?.navigationBarHidden = false
         self.navigationController?.navigationBar.translucent = false
         
@@ -37,29 +48,44 @@ class MaleDesignViewController: UIViewController , UITableViewDelegate , UITable
         contentTabelView.dataSource = self
         let cellNib = UINib(nibName: "ClothSourceCell", bundle: nil)
         contentTabelView.registerNib(cellNib, forCellReuseIdentifier: "cloth_item_cell")
-        malePositiveSourceCount = clothSource.malePositiveSources.count
     }
     
     func initButtonClickEvent(){
         maleBottomDesignView.styleButton.addTarget(self, action: "styleButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
     }
     
+    @IBAction func designClothClicked(sender:UIImageView){
+        if !contentTabelView.hidden{
+            contentTabelView.hidden = true
+        }
+    }
+    
     @IBAction func backAndFrontSelected(sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex{
         case 0:
+            currentClothData = clothSource.malePositiveSources
             backImageView.hidden = true
             frontImageView.hidden = false
+            reloadTableViewData()
         case 1:
+            currentClothData = clothSource.maleNegativeSources
             backImageView.hidden = false
             frontImageView.hidden = true
+            reloadTableViewData()
         default:
             break;
         }
     }
     
+    func reloadTableViewData(){
+        if !contentTabelView.hidden{
+            contentTabelView.reloadData()
+        }
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        let remain = malePositiveSourceCount % 5
-        let counts = malePositiveSourceCount / 5
+        let remain = malePositiveSourceCount % BUTTONS_PER_CELL
+        let counts = malePositiveSourceCount / BUTTONS_PER_CELL
         return remain == 0 ? counts : counts + 1
     }
     
@@ -72,13 +98,13 @@ class MaleDesignViewController: UIViewController , UITableViewDelegate , UITable
         let cell = tableView.dequeueReusableCellWithIdentifier("cloth_item_cell", forIndexPath: indexPath) as! ClothSourceCell
         let row = indexPath.row
         
-        print("invoke cell for row at index path")
+        //print("invoke cell for row at index path")
         
-        let firstCount = row * 5 + 0
-        let secondCount = row * 5 + 1
-        let thirdCount = row * 5 + 2
-        let fourthCount = row * 5 + 3
-        let fifthCount = row * 5 + 4
+        let firstCount = row * BUTTONS_PER_CELL + 0
+        let secondCount = row * BUTTONS_PER_CELL + 1
+        let thirdCount = row * BUTTONS_PER_CELL + 2
+        let fourthCount = row * BUTTONS_PER_CELL + 3
+        let fifthCount = row * BUTTONS_PER_CELL + 4
         
         //print("firstCount = \(firstCount)")
         
@@ -112,7 +138,7 @@ class MaleDesignViewController: UIViewController , UITableViewDelegate , UITable
     }
     
     func initTableviewCell(button:CustomButton ,index:Int){
-        let imageName:String = clothSource.malePositiveSources[index]
+        let imageName:String = currentClothData![index]
         //print("imagename is \(imageName)")
         button.setImageContentMode(mode: UIViewContentMode.ScaleAspectFit)
         let image = UIImage(named: imageName)
@@ -124,23 +150,40 @@ class MaleDesignViewController: UIViewController , UITableViewDelegate , UITable
     }
     
     func isOverArray(index : Int) -> Bool{
+        //print("index is \(index) , source count \(malePositiveSourceCount)")
         return index >= malePositiveSourceCount ? true : false
     }
     
     @IBAction func oneButtonClicked(sender:UIButton){
-        print("1button tag is \(sender.tag)")
+        //print("1button tag is \(sender.tag)")
+        setDesignCloth(sender.tag * BUTTONS_PER_CELL + 0)
     }
     @IBAction func twoButtonClicked(sender:UIButton){
-        print("2button tag is \(sender.tag)")
+        //print("2button tag is \(sender.tag)")
+        setDesignCloth(sender.tag * BUTTONS_PER_CELL + 1)
     }
     @IBAction func threeButtonClicked(sender:UIButton){
-        print("3button tag is \(sender.tag)")
+        //print("3button tag is \(sender.tag)")
+        setDesignCloth(sender.tag * BUTTONS_PER_CELL + 2)
     }
     @IBAction func fourButtonClicked(sender:UIButton){
-        print("4button tag is \(sender.tag)")
+        //print("4button tag is \(sender.tag)")
+        setDesignCloth(sender.tag * BUTTONS_PER_CELL + 3)
     }
     @IBAction func fiveButtonClicked(sender:UIButton){
-        print("5button tag is \(sender.tag)")
+        //print("5button tag is \(sender.tag)")
+        setDesignCloth(sender.tag * BUTTONS_PER_CELL + 4
+        )
+    }
+    
+    func setDesignCloth(index:Int){
+        if frontImageView.hidden{
+            frontImageView.image = UIImage(named: clothSource.malePositiveSources[index])
+            backImageView.image = UIImage(named: currentClothData![index])
+        }else{
+            frontImageView.image = UIImage(named: currentClothData![index])
+            backImageView.image = UIImage(named: clothSource.maleNegativeSources[index])
+        }
     }
     
     override func shouldAutorotate() -> Bool {
