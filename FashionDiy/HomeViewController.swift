@@ -8,13 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController{
+class HomeViewController: UIViewController{
     
     @IBOutlet weak var maleButton: CustomButton!
     @IBOutlet weak var femaleButton: CustomButton!
     @IBOutlet weak var coupleButton: CustomButton!
     @IBOutlet weak var clothSetButton: CustomButton!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +38,28 @@ class ViewController: UIViewController{
     
     override func shouldAutorotate() -> Bool {
         return false
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let segueIdentifier = segue.identifier
+        if segueIdentifier != "clothes_set"{
+            let destinationController = segue.destinationViewController as! DesignViewController
+            switch segueIdentifier!{
+            case "male":
+                print("male")
+                destinationController.currentDesignType = destinationController.MALE_DESIGN
+            case "female":
+                print("female")
+                destinationController.currentDesignType = destinationController.FEMALE_DESIGN
+            case "couple":
+                print("couple")
+                destinationController.currentDesignType = destinationController.COUPLE_DESIGN
+            default:
+                break;
+            }
+        }else{
+            
+        }
     }
     
     override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {

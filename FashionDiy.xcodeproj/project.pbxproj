@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB4E4D101CD4D31E00B72326 /* ClothesSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4E4D0F1CD4D31E00B72326 /* ClothesSetViewController.swift */; };
 		DB503A2D1CCE50020090F3B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB503A1D1CCE50020090F3B1 /* AppDelegate.swift */; };
 		DB503A2E1CCE50020090F3B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB503A1E1CCE50020090F3B1 /* Assets.xcassets */; };
 		DB503A2F1CCE50020090F3B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB503A1F1CCE50020090F3B1 /* LaunchScreen.storyboard */; };
@@ -17,13 +18,13 @@
 		DB503A341CCE50020090F3B1 /* ClothSourceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB503A261CCE50020090F3B1 /* ClothSourceCell.swift */; };
 		DB503A351CCE50020090F3B1 /* ClothSourceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB503A271CCE50020090F3B1 /* ClothSourceCell.xib */; };
 		DB503A361CCE50020090F3B1 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB503A281CCE50020090F3B1 /* CustomButton.swift */; };
-		DB503A371CCE50020090F3B1 /* FemaleDesignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB503A291CCE50020090F3B1 /* FemaleDesignViewController.swift */; };
 		DB503A381CCE50020090F3B1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB503A2A1CCE50020090F3B1 /* Info.plist */; };
-		DB503A391CCE50020090F3B1 /* MaleDesignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB503A2B1CCE50020090F3B1 /* MaleDesignViewController.swift */; };
-		DB503A3A1CCE50020090F3B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB503A2C1CCE50020090F3B1 /* ViewController.swift */; };
+		DB503A391CCE50020090F3B1 /* DesignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB503A2B1CCE50020090F3B1 /* DesignViewController.swift */; };
+		DB503A3A1CCE50020090F3B1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB503A2C1CCE50020090F3B1 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB4E4D0F1CD4D31E00B72326 /* ClothesSetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClothesSetViewController.swift; sourceTree = "<group>"; };
 		DB503A1D1CCE50020090F3B1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB503A1E1CCE50020090F3B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB503A201CCE50020090F3B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -34,10 +35,9 @@
 		DB503A261CCE50020090F3B1 /* ClothSourceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClothSourceCell.swift; path = ../ClothSourceCell.swift; sourceTree = "<group>"; };
 		DB503A271CCE50020090F3B1 /* ClothSourceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ClothSourceCell.xib; path = ../ClothSourceCell.xib; sourceTree = "<group>"; };
 		DB503A281CCE50020090F3B1 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomButton.swift; path = ../CustomButton.swift; sourceTree = "<group>"; };
-		DB503A291CCE50020090F3B1 /* FemaleDesignViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FemaleDesignViewController.swift; path = ../FemaleDesignViewController.swift; sourceTree = "<group>"; };
 		DB503A2A1CCE50020090F3B1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DB503A2B1CCE50020090F3B1 /* MaleDesignViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MaleDesignViewController.swift; path = ../MaleDesignViewController.swift; sourceTree = "<group>"; };
-		DB503A2C1CCE50020090F3B1 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
+		DB503A2B1CCE50020090F3B1 /* DesignViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DesignViewController.swift; path = ../DesignViewController.swift; sourceTree = "<group>"; };
+		DB503A2C1CCE50020090F3B1 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ../HomeViewController.swift; sourceTree = "<group>"; };
 		DB656A891CABF16D008D774B /* FashionDiy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FashionDiy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -52,9 +52,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB4E4D111CD4DA6B00B72326 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				DB503A251CCE50020090F3B1 /* ClothSource.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		DB503A1C1CCE50020090F3B1 /* FashionDiy */ = {
 			isa = PBXGroup;
 			children = (
+				DB4E4D111CD4DA6B00B72326 /* Common */,
 				DB503A3B1CCE50F00090F3B1 /* Controller */,
 				DB503A3C1CCE50F00090F3B1 /* CustomView */,
 				DB503A3D1CCE50F00090F3B1 /* CustomViewController */,
@@ -70,9 +79,9 @@
 		DB503A3B1CCE50F00090F3B1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				DB503A291CCE50020090F3B1 /* FemaleDesignViewController.swift */,
-				DB503A2B1CCE50020090F3B1 /* MaleDesignViewController.swift */,
-				DB503A2C1CCE50020090F3B1 /* ViewController.swift */,
+				DB503A2B1CCE50020090F3B1 /* DesignViewController.swift */,
+				DB503A2C1CCE50020090F3B1 /* HomeViewController.swift */,
+				DB4E4D0F1CD4D31E00B72326 /* ClothesSetViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -91,7 +100,6 @@
 			children = (
 				DB503A231CCE50020090F3B1 /* BottomChooseView.swift */,
 				DB503A261CCE50020090F3B1 /* ClothSourceCell.swift */,
-				DB503A251CCE50020090F3B1 /* ClothSource.swift */,
 				DB503A281CCE50020090F3B1 /* CustomButton.swift */,
 			);
 			path = CustomViewController;
@@ -191,11 +199,11 @@
 				DB503A311CCE50020090F3B1 /* BottomChooseView.swift in Sources */,
 				DB503A331CCE50020090F3B1 /* ClothSource.swift in Sources */,
 				DB503A2D1CCE50020090F3B1 /* AppDelegate.swift in Sources */,
-				DB503A391CCE50020090F3B1 /* MaleDesignViewController.swift in Sources */,
+				DB503A391CCE50020090F3B1 /* DesignViewController.swift in Sources */,
 				DB503A341CCE50020090F3B1 /* ClothSourceCell.swift in Sources */,
-				DB503A371CCE50020090F3B1 /* FemaleDesignViewController.swift in Sources */,
-				DB503A3A1CCE50020090F3B1 /* ViewController.swift in Sources */,
+				DB503A3A1CCE50020090F3B1 /* HomeViewController.swift in Sources */,
 				DB503A361CCE50020090F3B1 /* CustomButton.swift in Sources */,
+				DB4E4D101CD4D31E00B72326 /* ClothesSetViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

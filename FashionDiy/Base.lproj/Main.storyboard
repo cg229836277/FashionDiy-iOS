@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FashionDiy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="FashionDiy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -44,7 +44,7 @@
                                                 </constraints>
                                                 <state key="normal" image="女装"/>
                                                 <connections>
-                                                    <segue destination="y2Z-Wy-LaK" kind="show" id="6Qn-3Y-lR9"/>
+                                                    <segue destination="amD-CO-uML" kind="show" identifier="female" id="BWX-Nd-2EV"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -73,6 +73,9 @@
                                                     <constraint firstAttribute="height" constant="90" id="amH-TI-O13"/>
                                                 </constraints>
                                                 <state key="normal" image="情侣装"/>
+                                                <connections>
+                                                    <segue destination="amD-CO-uML" kind="show" identifier="couple" id="hHz-Xn-VkR"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -100,6 +103,9 @@
                                                     <constraint firstAttribute="height" constant="90" id="v5B-6N-aon"/>
                                                 </constraints>
                                                 <state key="normal" image="衣柜"/>
+                                                <connections>
+                                                    <segue destination="r7i-Eb-dqQ" kind="show" identifier="clothes_set" id="2Nr-Lg-7VT"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -136,7 +142,7 @@
                                                 </constraints>
                                                 <state key="normal" image="男装"/>
                                                 <connections>
-                                                    <segue destination="amD-CO-uML" kind="show" id="apu-BA-cdM"/>
+                                                    <segue destination="amD-CO-uML" kind="show" identifier="male" id="apu-BA-cdM"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -214,7 +220,7 @@
         <!--设计页-->
         <scene sceneID="IrL-of-scD">
             <objects>
-                <viewController id="amD-CO-uML" customClass="MaleDesignViewController" customModule="FashionDiy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="amD-CO-uML" customClass="DesignViewController" customModule="FashionDiy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="S38-kf-563"/>
                         <viewControllerLayoutGuide type="bottom" id="I3q-ze-MzM"/>
@@ -223,22 +229,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QzO-Jw-bH7">
-                                <rect key="frame" x="20" y="72" width="560" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="cQi-iO-SKq"/>
-                                </constraints>
-                                <segments>
-                                    <segment title="前"/>
-                                    <segment title="后"/>
-                                </segments>
-                                <connections>
-                                    <action selector="backAndFrontSelected:" destination="amD-CO-uML" eventType="valueChanged" id="TS8-CG-vY0"/>
-                                </connections>
-                            </segmentedControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6cy-Bo-bxg" userLabel="DesignDetail">
                                 <rect key="frame" x="0.0" y="108" width="600" height="432"/>
                                 <subviews>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ueE-av-9aV" userLabel="FemaleBack">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="432"/>
+                                    </imageView>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B09-P0-tlF" userLabel="FemaleFront">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="432"/>
+                                    </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="design_source_cloth_white_negative" translatesAutoresizingMaskIntoConstraints="NO" id="3j0-OP-kiI" userLabel="Back">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="432"/>
                                     </imageView>
@@ -258,14 +257,22 @@
                                 <color key="backgroundColor" red="0.78431372549019607" green="0.88627450980392153" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="OmE-Cq-sxR" firstAttribute="leading" secondItem="6cy-Bo-bxg" secondAttribute="leading" id="1yb-Io-W43"/>
+                                    <constraint firstAttribute="bottom" secondItem="ueE-av-9aV" secondAttribute="bottom" id="2pN-yf-Ihw"/>
                                     <constraint firstAttribute="trailing" secondItem="Mbm-MC-Tam" secondAttribute="trailing" id="5FZ-lx-ZXc"/>
+                                    <constraint firstItem="B09-P0-tlF" firstAttribute="top" secondItem="6cy-Bo-bxg" secondAttribute="top" id="5Mf-lu-j6H"/>
                                     <constraint firstAttribute="bottom" secondItem="OmE-Cq-sxR" secondAttribute="bottom" id="7gd-k8-kkD"/>
                                     <constraint firstAttribute="bottom" secondItem="3j0-OP-kiI" secondAttribute="bottom" id="Ch7-X4-fcc"/>
                                     <constraint firstAttribute="trailing" secondItem="3j0-OP-kiI" secondAttribute="trailing" id="UPm-UF-fnC"/>
                                     <constraint firstAttribute="bottom" secondItem="Mbm-MC-Tam" secondAttribute="bottom" id="WLB-Va-i5j"/>
+                                    <constraint firstItem="B09-P0-tlF" firstAttribute="leading" secondItem="6cy-Bo-bxg" secondAttribute="leading" id="XKc-PM-dj4"/>
+                                    <constraint firstItem="ueE-av-9aV" firstAttribute="top" secondItem="6cy-Bo-bxg" secondAttribute="top" id="akx-jG-l81"/>
+                                    <constraint firstAttribute="bottom" secondItem="B09-P0-tlF" secondAttribute="bottom" id="b9j-7G-nAZ"/>
+                                    <constraint firstItem="ueE-av-9aV" firstAttribute="leading" secondItem="6cy-Bo-bxg" secondAttribute="leading" id="ckE-2I-jzC"/>
                                     <constraint firstItem="OmE-Cq-sxR" firstAttribute="top" secondItem="6cy-Bo-bxg" secondAttribute="top" id="fTM-Mz-o1m"/>
+                                    <constraint firstAttribute="trailing" secondItem="B09-P0-tlF" secondAttribute="trailing" id="j5D-jc-AMe"/>
                                     <constraint firstItem="Mbm-MC-Tam" firstAttribute="leading" secondItem="6cy-Bo-bxg" secondAttribute="leading" id="j99-Y8-QjI"/>
                                     <constraint firstItem="3j0-OP-kiI" firstAttribute="leading" secondItem="6cy-Bo-bxg" secondAttribute="leading" id="jPY-bv-XT0"/>
+                                    <constraint firstAttribute="trailing" secondItem="ueE-av-9aV" secondAttribute="trailing" id="kUi-Nt-xQf"/>
                                     <constraint firstItem="3j0-OP-kiI" firstAttribute="top" secondItem="6cy-Bo-bxg" secondAttribute="top" id="lEb-l7-0rZ"/>
                                     <constraint firstItem="Mbm-MC-Tam" firstAttribute="leading" secondItem="6cy-Bo-bxg" secondAttribute="leading" id="ol6-1t-EqC"/>
                                     <constraint firstAttribute="trailing" secondItem="OmE-Cq-sxR" secondAttribute="trailing" id="yED-ZG-Puq"/>
@@ -278,6 +285,19 @@
                                     <constraint firstAttribute="height" constant="60" id="3rx-6c-o9i"/>
                                 </constraints>
                             </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QzO-Jw-bH7">
+                                <rect key="frame" x="20" y="72" width="560" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="cQi-iO-SKq"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="前"/>
+                                    <segment title="后"/>
+                                </segments>
+                                <connections>
+                                    <action selector="backAndFrontSelected:" destination="amD-CO-uML" eventType="valueChanged" id="TS8-CG-vY0"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -299,11 +319,15 @@
                                 <segue destination="Ue0-9i-cVJ" kind="unwind" unwindAction="backToHome:" id="uYT-Co-zmE"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="试穿" id="uVl-h9-wnJ"/>
                     </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="backImageView" destination="3j0-OP-kiI" id="xFD-b6-KcR"/>
                         <outlet property="contentTabelView" destination="Mbm-MC-Tam" id="BFq-xz-5cN"/>
+                        <outlet property="coupleFemaleBackImageView" destination="ueE-av-9aV" id="q7h-M7-Stt"/>
+                        <outlet property="coupleFemaleFrontImageView" destination="B09-P0-tlF" id="vnu-Mh-Qn5"/>
+                        <outlet property="designTitleSegment" destination="QzO-Jw-bH7" id="hgc-51-LPY"/>
                         <outlet property="frontImageView" destination="OmE-Cq-sxR" id="cID-93-mXt"/>
                         <outlet property="maleBottomDesignView" destination="uQt-Iy-GVH" id="8Dz-3x-4Ag"/>
                     </connections>
@@ -311,86 +335,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8hT-VB-Tck" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Ue0-9i-cVJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1614" y="-496"/>
+            <point key="canvasLocation" x="1694" y="112"/>
         </scene>
-        <!--女装设计页-->
-        <scene sceneID="Y8o-g9-jTL">
+        <!--Clothes Set View Controller-->
+        <scene sceneID="yiT-47-kH5">
             <objects>
-                <viewController id="y2Z-Wy-LaK" customClass="FemaleDesignViewController" customModule="FashionDiy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="r7i-Eb-dqQ" customClass="ClothesSetViewController" customModule="FashionDiy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="QGz-zu-kta"/>
-                        <viewControllerLayoutGuide type="bottom" id="mIT-K1-KHr"/>
+                        <viewControllerLayoutGuide type="top" id="RSk-8i-QSh"/>
+                        <viewControllerLayoutGuide type="bottom" id="eHA-Oo-WfM"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="yft-HT-dCq">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lz7-WX-Oix" customClass="BottomChooseView" customModule="FashionDiy" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="540" width="600" height="60"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="140" id="v1Z-xA-n3V"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="mIT-K1-KHr" firstAttribute="top" secondItem="Lz7-WX-Oix" secondAttribute="bottom" id="YyO-Px-Sfa"/>
-                            <constraint firstItem="Lz7-WX-Oix" firstAttribute="leading" secondItem="yft-HT-dCq" secondAttribute="leadingMargin" constant="-20" id="dG8-pU-VZM"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Lz7-WX-Oix" secondAttribute="trailing" constant="-20" id="xHv-wO-TFc"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="女装设计页" id="Alt-9F-yxb">
-                        <barButtonItem key="leftBarButtonItem" title="返回" id="VYz-6O-tgq">
-                            <connections>
-                                <segue destination="uYZ-6U-Iwy" kind="unwind" unwindAction="backToHome:" id="u4I-Zy-Vwl"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="bottomView" destination="Lz7-WX-Oix" id="lgH-WQ-uWW"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oIJ-NM-oW3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="uYZ-6U-Iwy" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="1612" y="158"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="f9R-Vn-M1o">
-            <objects>
-                <viewController id="bwa-6C-rEj" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y0O-7X-uGk"/>
-                        <viewControllerLayoutGuide type="bottom" id="9Qu-el-NQS"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="AgF-Io-EJ9">
+                    <view key="view" contentMode="scaleToFill" id="wq1-0R-3h4">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7Rp-sA-CwU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AhQ-ou-Fdu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1610" y="828"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="FMc-x0-6ei">
-            <objects>
-                <viewController id="0Ap-ZF-fiU" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="AEg-Sc-WfK"/>
-                        <viewControllerLayoutGuide type="bottom" id="kcg-Mv-GPr"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Dzi-go-Ul4">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WP3-g1-naF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1614" y="1508"/>
+            <point key="canvasLocation" x="1694" y="826"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="haU-Xd-JOy">
@@ -408,7 +371,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4JC-oz-aKu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="90" y="393"/>
+            <point key="canvasLocation" x="66" y="227"/>
         </scene>
     </scenes>
     <resources>
@@ -422,4 +385,7 @@
         <image name="背景" width="320" height="568"/>
         <image name="衣柜" width="89" height="93"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="BWX-Nd-2EV"/>
+    </inferredMetricsTieBreakers>
 </document>
