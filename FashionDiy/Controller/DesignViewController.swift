@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DesignViewController: UIViewController , UITableViewDelegate , UITableViewDataSource {
+class DesignViewController: UIViewController , UITableViewDelegate , UITableViewDataSource , UIImagePickerControllerDelegate , UINavigationControllerDelegate{
     
     @IBOutlet weak var frontImageView: UIImageView!
     @IBOutlet weak var backImageView: UIImageView!
@@ -20,6 +20,9 @@ class DesignViewController: UIViewController , UITableViewDelegate , UITableView
     @IBOutlet weak var maleBottomDesignView: BottomChooseView!
     
     @IBOutlet weak var designTitleSegment: UISegmentedControl!
+    
+    //整个设计区域的父视图
+    @IBOutlet weak var designParentView: UIView!
     
     var clothSource = ClothSource()
     var designDataSourceCount = 0
@@ -38,6 +41,9 @@ class DesignViewController: UIViewController , UITableViewDelegate , UITableView
     var currentFemaleNegativeClothData:[String]?
     
     var currentDesignData:[String]?
+    
+    @IBOutlet weak var cameraParentView: UIView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +67,7 @@ class DesignViewController: UIViewController , UITableViewDelegate , UITableView
         
         initTableView()
         initButtonClickEvent()
+        initMainDesignView()
     }
     
     func initTableView(){
@@ -127,11 +134,44 @@ class DesignViewController: UIViewController , UITableViewDelegate , UITableView
     
     func initButtonClickEvent(){
         maleBottomDesignView.styleButton.addTarget(self, action: "styleButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+        maleBottomDesignView.photoButton.addTarget(self, action: "takePhotoButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+    }
+    
+    func initMainDesignView(){
+        var mainDesignView = UIImageView()
+        mainDesignView.translatesAutoresizingMaskIntoConstraints = false
+        designParentView.addSubview(mainDesignView)
+        
+        let parentWidth = designParentView.frame.width
+        let parentHeight = designParentView.frame.height
+        print("parent width = \(parentWidth) , parent height = \(parentHeight)")
+        
+        let designFrameWidth = parentWidth / 2
+        let designFrameHeight = parentHeight / 3
+        print("designFrameWidth = \(designFrameWidth) , designFrameHeight = \(designFrameHeight)")
+        
+        let widthConstraint = NSLayoutConstraint(item: mainDesignView, attribute: .Width, relatedBy: .Equal,
+            toItem: nil, attribute: .Width, multiplier: 1.0, constant: designFrameWidth)
+        mainDesignView.addConstraint(widthConstraint)
+        
+        let heightConstraint = NSLayoutConstraint(item: mainDesignView, attribute: .Height, relatedBy: .Equal,
+            toItem: nil, attribute: .Width, multiplier: 1.0, constant: designFrameHeight)
+        mainDesignView.addConstraint(heightConstraint)
+        
+        let xConstraint = NSLayoutConstraint(item: mainDesignView, attribute: .CenterX, relatedBy: .Equal, toItem: self.designParentView, attribute: .CenterX, multiplier: 1, constant: 0)
+        
+        let yConstraint = NSLayoutConstraint(item: mainDesignView, attribute: .CenterY, relatedBy: .Equal, toItem: self.designParentView, attribute: .CenterY, multiplier: 1, constant: 0)
+        mainDesignView.addConstraint(xConstraint)
+        mainDesignView.addConstraint(yConstraint)
+    
     }
     
     @IBAction func designClothClicked(sender:UIImageView){
         if !contentTabelView.hidden{
             contentTabelView.hidden = true
+        }
+        if !cameraParentView.hidden{
+            cameraParentView.hidden = true
         }
     }
     
@@ -290,12 +330,50 @@ class DesignViewController: UIViewController , UITableViewDelegate , UITableView
     @IBAction
     func styleButtonClicked(sender:UIButton){
         //print("choose style")
+        cameraParentView.hidden = true
         if contentTabelView.hidden{
             contentTabelView.hidden = false
         }else{
             contentTabelView.hidden = true
         }
     }
+    
+    @IBAction func takePhotoButtonClicked(sender:UIButton){
+        contentTabelView.hidden = true
+        if cameraParentView.hidden{
+            cameraParentView.hidden = false
+        }else{
+            cameraParentView.hidden = true
+        }
+    }
+    
+    
+    @IBAction func picturesSetClicked(sender: UIButton) {
+        let isSupportPhotoLibrary = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary)
+        if isSupportPhotoLibrary{
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = .PhotoLibrary
+            imagePicker.allowsEditing = false
+            self.presentViewController(imagePicker, animated: true, completion: { () -> Void in
+                
+            })
+            
+        }else{
+            print("打开相册出错")
+        }
+    }
+    
+    @IBAction func takePhotosClicked(sender: UIButton) {
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        let chooseImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        picker.dismissViewControllerAnimated(true) { () -> Void in
+            
+        }
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
