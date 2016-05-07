@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Home View Controller-->
@@ -245,6 +246,18 @@
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="432"/>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </imageView>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KQt-J3-a26" userLabel="MaleFrontDetailView">
+                                        <rect key="frame" x="210" y="54" width="180" height="324"/>
+                                    </imageView>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HPI-8K-mGd" userLabel="MaleBackDetailView">
+                                        <rect key="frame" x="210" y="54" width="180" height="324"/>
+                                    </imageView>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="USu-P7-EuZ" userLabel="FemaleFrontDetailView">
+                                        <rect key="frame" x="210" y="54" width="180" height="324"/>
+                                    </imageView>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0dH-yj-JN8" userLabel="FemaleBackDetailView">
+                                        <rect key="frame" x="210" y="54" width="180" height="324"/>
+                                    </imageView>
                                     <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Mbm-MC-Tam">
                                         <rect key="frame" x="0.0" y="332" width="600" height="100"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -288,29 +301,45 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.78431372549019607" green="0.88627450980392153" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="USu-P7-EuZ" firstAttribute="width" secondItem="B09-P0-tlF" secondAttribute="width" multiplier="0.3" id="1v0-3b-Rqu"/>
                                     <constraint firstItem="OmE-Cq-sxR" firstAttribute="leading" secondItem="6cy-Bo-bxg" secondAttribute="leading" id="1yb-Io-W43"/>
+                                    <constraint firstItem="USu-P7-EuZ" firstAttribute="height" secondItem="B09-P0-tlF" secondAttribute="height" multiplier="0.75" id="2Sq-O7-ds8"/>
                                     <constraint firstAttribute="bottom" secondItem="ueE-av-9aV" secondAttribute="bottom" id="2pN-yf-Ihw"/>
+                                    <constraint firstItem="0dH-yj-JN8" firstAttribute="width" secondItem="ueE-av-9aV" secondAttribute="width" multiplier="0.3" id="59P-Gy-vEX"/>
                                     <constraint firstAttribute="trailing" secondItem="Mbm-MC-Tam" secondAttribute="trailing" id="5FZ-lx-ZXc"/>
                                     <constraint firstItem="B09-P0-tlF" firstAttribute="top" secondItem="6cy-Bo-bxg" secondAttribute="top" id="5Mf-lu-j6H"/>
+                                    <constraint firstItem="HPI-8K-mGd" firstAttribute="height" secondItem="3j0-OP-kiI" secondAttribute="height" multiplier="0.75" id="75R-hd-ejS"/>
                                     <constraint firstAttribute="bottom" secondItem="OmE-Cq-sxR" secondAttribute="bottom" id="7gd-k8-kkD"/>
+                                    <constraint firstItem="HPI-8K-mGd" firstAttribute="centerY" secondItem="6cy-Bo-bxg" secondAttribute="centerY" id="BCB-wd-ne1"/>
+                                    <constraint firstItem="USu-P7-EuZ" firstAttribute="centerX" secondItem="6cy-Bo-bxg" secondAttribute="centerX" id="BqP-of-Gdz"/>
                                     <constraint firstAttribute="bottom" secondItem="3j0-OP-kiI" secondAttribute="bottom" id="Ch7-X4-fcc"/>
+                                    <constraint firstItem="HPI-8K-mGd" firstAttribute="width" secondItem="3j0-OP-kiI" secondAttribute="width" multiplier="0.3" id="Dz0-4A-ZSh"/>
+                                    <constraint firstItem="KQt-J3-a26" firstAttribute="height" secondItem="OmE-Cq-sxR" secondAttribute="height" multiplier="0.75" id="GKV-S1-ygL"/>
                                     <constraint firstAttribute="trailing" secondItem="3j0-OP-kiI" secondAttribute="trailing" id="UPm-UF-fnC"/>
                                     <constraint firstAttribute="bottom" secondItem="Mbm-MC-Tam" secondAttribute="bottom" id="WLB-Va-i5j"/>
                                     <constraint firstItem="B09-P0-tlF" firstAttribute="leading" secondItem="6cy-Bo-bxg" secondAttribute="leading" id="XKc-PM-dj4"/>
+                                    <constraint firstItem="0dH-yj-JN8" firstAttribute="height" secondItem="ueE-av-9aV" secondAttribute="height" multiplier="0.75" id="aP2-28-eP5"/>
                                     <constraint firstItem="ueE-av-9aV" firstAttribute="top" secondItem="6cy-Bo-bxg" secondAttribute="top" id="akx-jG-l81"/>
                                     <constraint firstAttribute="bottom" secondItem="B09-P0-tlF" secondAttribute="bottom" id="b9j-7G-nAZ"/>
+                                    <constraint firstItem="HPI-8K-mGd" firstAttribute="centerX" secondItem="6cy-Bo-bxg" secondAttribute="centerX" id="bnS-ff-vlY"/>
                                     <constraint firstItem="ueE-av-9aV" firstAttribute="leading" secondItem="6cy-Bo-bxg" secondAttribute="leading" id="ckE-2I-jzC"/>
+                                    <constraint firstItem="0dH-yj-JN8" firstAttribute="centerY" secondItem="6cy-Bo-bxg" secondAttribute="centerY" id="f9m-JQ-plf"/>
                                     <constraint firstItem="OmE-Cq-sxR" firstAttribute="top" secondItem="6cy-Bo-bxg" secondAttribute="top" id="fTM-Mz-o1m"/>
+                                    <constraint firstItem="KQt-J3-a26" firstAttribute="centerY" secondItem="6cy-Bo-bxg" secondAttribute="centerY" id="id1-59-irz"/>
                                     <constraint firstAttribute="trailing" secondItem="B09-P0-tlF" secondAttribute="trailing" id="j5D-jc-AMe"/>
                                     <constraint firstItem="Mbm-MC-Tam" firstAttribute="leading" secondItem="6cy-Bo-bxg" secondAttribute="leading" id="j99-Y8-QjI"/>
                                     <constraint firstItem="3j0-OP-kiI" firstAttribute="leading" secondItem="6cy-Bo-bxg" secondAttribute="leading" id="jPY-bv-XT0"/>
+                                    <constraint firstItem="0dH-yj-JN8" firstAttribute="centerX" secondItem="6cy-Bo-bxg" secondAttribute="centerX" id="jfV-ws-Bve"/>
                                     <constraint firstAttribute="trailing" secondItem="ueE-av-9aV" secondAttribute="trailing" id="kUi-Nt-xQf"/>
                                     <constraint firstAttribute="trailing" secondItem="0nf-Af-uCv" secondAttribute="trailing" id="kdV-Fb-dbg"/>
                                     <constraint firstItem="3j0-OP-kiI" firstAttribute="top" secondItem="6cy-Bo-bxg" secondAttribute="top" id="lEb-l7-0rZ"/>
                                     <constraint firstItem="Mbm-MC-Tam" firstAttribute="leading" secondItem="6cy-Bo-bxg" secondAttribute="leading" id="ol6-1t-EqC"/>
                                     <constraint firstItem="0nf-Af-uCv" firstAttribute="leading" secondItem="6cy-Bo-bxg" secondAttribute="leading" id="rn6-K9-Jy6"/>
+                                    <constraint firstItem="USu-P7-EuZ" firstAttribute="centerY" secondItem="6cy-Bo-bxg" secondAttribute="centerY" id="tB0-sa-VEi"/>
+                                    <constraint firstItem="KQt-J3-a26" firstAttribute="centerX" secondItem="6cy-Bo-bxg" secondAttribute="centerX" id="vvc-8L-ggc"/>
                                     <constraint firstAttribute="bottom" secondItem="0nf-Af-uCv" secondAttribute="bottom" id="whu-z7-euG"/>
                                     <constraint firstAttribute="trailing" secondItem="OmE-Cq-sxR" secondAttribute="trailing" id="yED-ZG-Puq"/>
+                                    <constraint firstItem="KQt-J3-a26" firstAttribute="width" secondItem="OmE-Cq-sxR" secondAttribute="width" multiplier="0.3" id="zJs-qc-mFI"/>
                                 </constraints>
                             </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QzO-Jw-bH7">
@@ -365,8 +394,12 @@
                         <outlet property="coupleFemaleFrontImageView" destination="B09-P0-tlF" id="vnu-Mh-Qn5"/>
                         <outlet property="designParentView" destination="6cy-Bo-bxg" id="55l-VI-P3v"/>
                         <outlet property="designTitleSegment" destination="QzO-Jw-bH7" id="hgc-51-LPY"/>
+                        <outlet property="femaleBackDesignView" destination="0dH-yj-JN8" id="zAP-Rz-2Ub"/>
+                        <outlet property="femaleFrontDesignView" destination="USu-P7-EuZ" id="Ejf-It-X7U"/>
                         <outlet property="frontImageView" destination="OmE-Cq-sxR" id="cID-93-mXt"/>
+                        <outlet property="maleBackDesignView" destination="HPI-8K-mGd" id="Fwa-uf-pQs"/>
                         <outlet property="maleBottomDesignView" destination="uQt-Iy-GVH" id="8Dz-3x-4Ag"/>
+                        <outlet property="maleFrontDesignView" destination="KQt-J3-a26" id="Z38-A7-c1y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8hT-VB-Tck" userLabel="First Responder" sceneMemberID="firstResponder"/>

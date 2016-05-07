@@ -24,6 +24,11 @@ class DesignViewController: UIViewController , UITableViewDelegate , UITableView
     //整个设计区域的父视图
     @IBOutlet weak var designParentView: UIView!
     
+    @IBOutlet weak var maleFrontDesignView: UIImageView!
+    @IBOutlet weak var maleBackDesignView: UIImageView!
+    @IBOutlet weak var femaleFrontDesignView: UIImageView!
+    @IBOutlet weak var femaleBackDesignView: UIImageView!
+    
     var clothSource = ClothSource()
     var designDataSourceCount = 0
     
@@ -34,6 +39,12 @@ class DesignViewController: UIViewController , UITableViewDelegate , UITableView
     
     let BUTTONS_PER_CELL = 5
     
+    enum CLOTH_TYPE{
+        case MALE_FRONT,MALE_BACK,FEMALE_FRONT,FEMALE_BACK
+    }
+    
+    var clothType:CLOTH_TYPE = .MALE_FRONT
+    
     var currentPositiveClothData:[String]?
     var currentNegativeClothData:[String]?
     
@@ -43,7 +54,6 @@ class DesignViewController: UIViewController , UITableViewDelegate , UITableView
     var currentDesignData:[String]?
     
     @IBOutlet weak var cameraParentView: UIView!
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,7 +77,6 @@ class DesignViewController: UIViewController , UITableViewDelegate , UITableView
         
         initTableView()
         initButtonClickEvent()
-        initMainDesignView()
     }
     
     func initTableView(){
@@ -81,12 +90,16 @@ class DesignViewController: UIViewController , UITableViewDelegate , UITableView
         switch currentDesignType{
         case MALE_DESIGN:
             print("male design")
+            clothType = .MALE_FRONT
             initMaleDesignData()
         case FEMALE_DESIGN:
             print("female design")
+            //在情侣装设计的时候才会严格区分
+            clothType = .MALE_FRONT
             initFemaleDesignData()
         case COUPLE_DESIGN:
             print("couple design")
+            clothType = .MALE_FRONT
             initCoupleDesignData()
         default:
             break
@@ -137,35 +150,6 @@ class DesignViewController: UIViewController , UITableViewDelegate , UITableView
         maleBottomDesignView.photoButton.addTarget(self, action: "takePhotoButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
     }
     
-    func initMainDesignView(){
-        var mainDesignView = UIImageView()
-        mainDesignView.translatesAutoresizingMaskIntoConstraints = false
-        designParentView.addSubview(mainDesignView)
-        
-        let parentWidth = designParentView.frame.width
-        let parentHeight = designParentView.frame.height
-        print("parent width = \(parentWidth) , parent height = \(parentHeight)")
-        
-        let designFrameWidth = parentWidth / 2
-        let designFrameHeight = parentHeight / 3
-        print("designFrameWidth = \(designFrameWidth) , designFrameHeight = \(designFrameHeight)")
-        
-        let widthConstraint = NSLayoutConstraint(item: mainDesignView, attribute: .Width, relatedBy: .Equal,
-            toItem: nil, attribute: .Width, multiplier: 1.0, constant: designFrameWidth)
-        mainDesignView.addConstraint(widthConstraint)
-        
-        let heightConstraint = NSLayoutConstraint(item: mainDesignView, attribute: .Height, relatedBy: .Equal,
-            toItem: nil, attribute: .Width, multiplier: 1.0, constant: designFrameHeight)
-        mainDesignView.addConstraint(heightConstraint)
-        
-        let xConstraint = NSLayoutConstraint(item: mainDesignView, attribute: .CenterX, relatedBy: .Equal, toItem: self.designParentView, attribute: .CenterX, multiplier: 1, constant: 0)
-        
-        let yConstraint = NSLayoutConstraint(item: mainDesignView, attribute: .CenterY, relatedBy: .Equal, toItem: self.designParentView, attribute: .CenterY, multiplier: 1, constant: 0)
-        mainDesignView.addConstraint(xConstraint)
-        mainDesignView.addConstraint(yConstraint)
-    
-    }
-    
     @IBAction func designClothClicked(sender:UIImageView){
         if !contentTabelView.hidden{
             contentTabelView.hidden = true
@@ -176,44 +160,71 @@ class DesignViewController: UIViewController , UITableViewDelegate , UITableView
     }
     
     @IBAction func backAndFrontSelected(sender: UISegmentedControl) {
+        var index = 0
         switch sender.selectedSegmentIndex{
         case 0:
             currentDesignData = self.currentPositiveClothData
             backImageView.hidden = true
             frontImageView.hidden = false
-            coupleFemaleBackImageView.hidden = true
-            coupleFemaleFrontImageView.hidden = true
-            reloadTableViewData()
+            disVisiableCoupleView()
+            index = 0
         case 1:
             currentDesignData = self.currentNegativeClothData
             backImageView.hidden = false
             frontImageView.hidden = true
-            coupleFemaleBackImageView.hidden = true
-            coupleFemaleFrontImageView.hidden = true
-            reloadTableViewData()
+            disVisiableCoupleView()
+            index = 1
         case 2:
             currentDesignData = self.currentFemalePositiveClothData
-            backImageView.hidden = true
-            frontImageView.hidden = true
+            disVisiableSimpleDesignView()
             coupleFemaleBackImageView.hidden = true
             coupleFemaleFrontImageView.hidden = false
-            reloadTableViewData()
+            index = 2
         case 3:
             currentDesignData = self.currentFemaleNegativeClothData
-            backImageView.hidden = true
-            frontImageView.hidden = true
+            disVisiableSimpleDesignView()
             coupleFemaleBackImageView.hidden = false
             coupleFemaleFrontImageView.hidden = true
-            reloadTableViewData()
+            index = 3
         default:
             break;
         }
+        reloadTableViewData()
+        setCurrentDesinType(index)
+    }
+    
+    func disVisiableCoupleView(){
+        coupleFemaleBackImageView.hidden = true
+        coupleFemaleFrontImageView.hidden = true
+    }
+    
+    func disVisiableSimpleDesignView(){
+        backImageView.hidden = true
+        frontImageView.hidden = true
     }
     
     func reloadTableViewData(){
         if !contentTabelView.hidden{
             contentTabelView.reloadData()
         }
+    }
+    
+    func setCurrentDesinType(index : Int){
+        switch currentDesignType{
+        case FEMALE_DESIGN:
+            index == 0 ? (clothType = .MALE_FRONT) : (clothType = .MALE_BACK)
+        case MALE_DESIGN:
+            index == 0 ? (clothType = .MALE_FRONT) : (clothType = .MALE_BACK)
+        case COUPLE_DESIGN:
+            if index >= 2{
+                index == 2 ? (clothType = .FEMALE_FRONT) : (clothType = .FEMALE_BACK)
+            }else{
+                index == 0 ? (clothType = .MALE_FRONT) : (clothType = .MALE_BACK)
+            }
+        default:
+            break
+        }
+        getCurrentDesignType()
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
@@ -369,8 +380,48 @@ class DesignViewController: UIViewController , UITableViewDelegate , UITableView
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         let chooseImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        var imageView = getCurrentDesignType()
+        imageView.hidden = false
+        imageView.image = chooseImage
         picker.dismissViewControllerAnimated(true) { () -> Void in
             
+        }
+    }
+    
+    func getCurrentDesignType()->UIImageView{
+        print("clothtype = \(clothType)")
+        switch clothType{
+        case .MALE_FRONT:
+            setClothDetailInVisiable(maleBackDesignView! , imageView2: femaleBackDesignView!)
+            setClothDetailInVisiable(femaleFrontDesignView! , imageView2: nil);
+            //maleFrontDesignView.hidden = false
+            return maleFrontDesignView
+        case .MALE_BACK:
+            setClothDetailInVisiable(maleFrontDesignView! , imageView2: femaleBackDesignView!)
+            setClothDetailInVisiable(femaleFrontDesignView! , imageView2: nil);
+            //maleBackDesignView.hidden = false
+            return maleBackDesignView
+        case .FEMALE_FRONT:
+            setClothDetailInVisiable(maleFrontDesignView! , imageView2: maleBackDesignView!)
+            setClothDetailInVisiable(femaleBackDesignView! , imageView2: nil);
+            //femaleFrontDesignView.hidden = false
+            return femaleFrontDesignView
+        case .FEMALE_BACK:
+            setClothDetailInVisiable(maleFrontDesignView! , imageView2: maleBackDesignView!)
+            setClothDetailInVisiable(femaleFrontDesignView! , imageView2: nil);
+            //femaleBackDesignView.hidden = false
+            return femaleBackDesignView
+        default:
+            break
+        }
+    }
+    
+    func setClothDetailInVisiable(imageView1:UIImageView? , imageView2:UIImageView?){
+        if imageView1 != nil{
+            imageView1!.hidden = true
+        }
+        if imageView2 != nil && !imageView2!.hidden {
+            imageView2!.hidden = true
         }
     }
     
