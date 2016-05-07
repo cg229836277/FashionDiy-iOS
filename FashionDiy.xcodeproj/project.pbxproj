@@ -55,6 +55,8 @@
 		DB5048D81CDE23CF00B2F811 /* design_model_urban_shadow_1.svg in Resources */ = {isa = PBXBuildFile; fileRef = DB5048B61CDE23CF00B2F811 /* design_model_urban_shadow_1.svg */; };
 		DB5048D91CDE23CF00B2F811 /* design_model_urban_shadow_2.svg in Resources */ = {isa = PBXBuildFile; fileRef = DB5048B71CDE23CF00B2F811 /* design_model_urban_shadow_2.svg */; };
 		DB5048DA1CDE23CF00B2F811 /* design_model_wifi.svg in Resources */ = {isa = PBXBuildFile; fileRef = DB5048B81CDE23CF00B2F811 /* design_model_wifi.svg */; };
+		DB5048F01CDE32D300B2F811 /* ScaleRotateImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5048EF1CDE32D300B2F811 /* ScaleRotateImageView.swift */; };
+		DB5048F21CDE330200B2F811 /* ScaleRotateImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5048F11CDE330200B2F811 /* ScaleRotateImageView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +108,8 @@
 		DB5048B61CDE23CF00B2F811 /* design_model_urban_shadow_1.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = design_model_urban_shadow_1.svg; sourceTree = "<group>"; };
 		DB5048B71CDE23CF00B2F811 /* design_model_urban_shadow_2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = design_model_urban_shadow_2.svg; sourceTree = "<group>"; };
 		DB5048B81CDE23CF00B2F811 /* design_model_wifi.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = design_model_wifi.svg; sourceTree = "<group>"; };
+		DB5048EF1CDE32D300B2F811 /* ScaleRotateImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleRotateImageView.swift; sourceTree = "<group>"; };
+		DB5048F11CDE330200B2F811 /* ScaleRotateImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScaleRotateImageView.xib; sourceTree = "<group>"; };
 		DB656A891CABF16D008D774B /* FashionDiy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FashionDiy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -160,6 +164,7 @@
 				DB4E4D201CD4ED9600B72326 /* CustomButton.swift */,
 				DB4E4D181CD4ED5F00B72326 /* BottomChooseView.xib */,
 				DB4E4D191CD4ED5F00B72326 /* ClothSourceCell.xib */,
+				DB5048F11CDE330200B2F811 /* ScaleRotateImageView.xib */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 		DB503A3D1CCE50F00090F3B1 /* CustomViewController */ = {
 			isa = PBXGroup;
 			children = (
+				DB5048EF1CDE32D300B2F811 /* ScaleRotateImageView.swift */,
 				DB4E4D1C1CD4ED7400B72326 /* BottomChooseView.swift */,
 				DB4E4D1D1CD4ED7400B72326 /* ClothSourceCell.swift */,
 			);
@@ -329,6 +335,7 @@
 				DB5048D91CDE23CF00B2F811 /* design_model_urban_shadow_2.svg in Resources */,
 				DB5048CB1CDE23CF00B2F811 /* design_model_shape_3.svg in Resources */,
 				DB5048D61CDE23CF00B2F811 /* design_model_tie.svg in Resources */,
+				DB5048F21CDE330200B2F811 /* ScaleRotateImageView.xib in Resources */,
 				DB4E4D1B1CD4ED5F00B72326 /* ClothSourceCell.xib in Resources */,
 				DB5048CD1CDE23CF00B2F811 /* design_model_six_triangle.svg in Resources */,
 			);
@@ -345,6 +352,7 @@
 				DB503A2D1CCE50020090F3B1 /* AppDelegate.swift in Sources */,
 				DB4E4D131CD4ED4000B72326 /* ClothSource.swift in Sources */,
 				DB4E4D171CD4ED4F00B72326 /* HomeViewController.swift in Sources */,
+				DB5048F01CDE32D300B2F811 /* ScaleRotateImageView.swift in Sources */,
 				DB4E4D211CD4ED9600B72326 /* CustomButton.swift in Sources */,
 				DB4E4D161CD4ED4F00B72326 /* DesignViewController.swift in Sources */,
 				DB4E4D1E1CD4ED7400B72326 /* BottomChooseView.swift in Sources */,

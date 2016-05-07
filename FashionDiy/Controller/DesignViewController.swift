@@ -95,7 +95,7 @@ class DesignViewController: UIViewController , UITableViewDelegate , UITableView
         case FEMALE_DESIGN:
             print("female design")
             //在情侣装设计的时候才会严格区分
-            clothType = .MALE_FRONT
+            clothType = .FEMALE_FRONT
             initFemaleDesignData()
         case COUPLE_DESIGN:
             print("couple design")
@@ -176,21 +176,21 @@ class DesignViewController: UIViewController , UITableViewDelegate , UITableView
             index = 1
         case 2:
             currentDesignData = self.currentFemalePositiveClothData
-            disVisiableSimpleDesignView()
             coupleFemaleBackImageView.hidden = true
             coupleFemaleFrontImageView.hidden = false
+            disVisiableSimpleDesignView()
             index = 2
         case 3:
             currentDesignData = self.currentFemaleNegativeClothData
-            disVisiableSimpleDesignView()
             coupleFemaleBackImageView.hidden = false
             coupleFemaleFrontImageView.hidden = true
+            disVisiableSimpleDesignView()
             index = 3
         default:
             break;
         }
         reloadTableViewData()
-        setCurrentDesinType(index)
+        setCurDesignType(index)
     }
     
     func disVisiableCoupleView(){
@@ -209,10 +209,10 @@ class DesignViewController: UIViewController , UITableViewDelegate , UITableView
         }
     }
     
-    func setCurrentDesinType(index : Int){
+    func setCurDesignType(index : Int){
         switch currentDesignType{
         case FEMALE_DESIGN:
-            index == 0 ? (clothType = .MALE_FRONT) : (clothType = .MALE_BACK)
+            index == 0 ? (clothType = .FEMALE_FRONT) : (clothType = .FEMALE_BACK)
         case MALE_DESIGN:
             index == 0 ? (clothType = .MALE_FRONT) : (clothType = .MALE_BACK)
         case COUPLE_DESIGN:
@@ -376,12 +376,25 @@ class DesignViewController: UIViewController , UITableViewDelegate , UITableView
     }
     
     @IBAction func takePhotosClicked(sender: UIButton) {
+        let isSupportCamera = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
+        if isSupportCamera{
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = .Camera
+            imagePicker.allowsEditing = true
+            self.presentViewController(imagePicker, animated: true, completion: { () -> Void in
+                
+            })
+            
+        }else{
+            print("打开camera出错")
+        }
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         let chooseImage = info[UIImagePickerControllerOriginalImage] as! UIImage
-        var imageView = getCurrentDesignType()
-        imageView.hidden = false
+        var imageView:UIImageView = getCurrentDesignType()
+        //imageView.hidden = false
         imageView.image = chooseImage
         picker.dismissViewControllerAnimated(true) { () -> Void in
             
@@ -389,27 +402,27 @@ class DesignViewController: UIViewController , UITableViewDelegate , UITableView
     }
     
     func getCurrentDesignType()->UIImageView{
-        print("clothtype = \(clothType)")
+        //print("clothtype = \(clothType)")
         switch clothType{
         case .MALE_FRONT:
             setClothDetailInVisiable(maleBackDesignView! , imageView2: femaleBackDesignView!)
             setClothDetailInVisiable(femaleFrontDesignView! , imageView2: nil);
-            //maleFrontDesignView.hidden = false
+            maleFrontDesignView.hidden = false
             return maleFrontDesignView
         case .MALE_BACK:
             setClothDetailInVisiable(maleFrontDesignView! , imageView2: femaleBackDesignView!)
             setClothDetailInVisiable(femaleFrontDesignView! , imageView2: nil);
-            //maleBackDesignView.hidden = false
+            maleBackDesignView.hidden = false
             return maleBackDesignView
         case .FEMALE_FRONT:
             setClothDetailInVisiable(maleFrontDesignView! , imageView2: maleBackDesignView!)
             setClothDetailInVisiable(femaleBackDesignView! , imageView2: nil);
-            //femaleFrontDesignView.hidden = false
+            femaleFrontDesignView.hidden = false
             return femaleFrontDesignView
         case .FEMALE_BACK:
             setClothDetailInVisiable(maleFrontDesignView! , imageView2: maleBackDesignView!)
             setClothDetailInVisiable(femaleFrontDesignView! , imageView2: nil);
-            //femaleBackDesignView.hidden = false
+            femaleBackDesignView.hidden = false
             return femaleBackDesignView
         default:
             break

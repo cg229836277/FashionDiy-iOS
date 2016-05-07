@@ -231,35 +231,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6cy-Bo-bxg" userLabel="DesignDetail">
-                                <rect key="frame" x="0.0" y="108" width="600" height="432"/>
+                                <rect key="frame" x="0.0" y="120" width="600" height="420"/>
                                 <subviews>
                                     <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ueE-av-9aV" userLabel="FemaleBack">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="432"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="420"/>
                                     </imageView>
                                     <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B09-P0-tlF" userLabel="FemaleFront">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="432"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="420"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="design_source_cloth_white_negative" translatesAutoresizingMaskIntoConstraints="NO" id="3j0-OP-kiI" userLabel="Back">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="432"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="420"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="design_source_cloth_white_positive" translatesAutoresizingMaskIntoConstraints="NO" id="OmE-Cq-sxR" userLabel="Front">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="432"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="420"/>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </imageView>
                                     <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KQt-J3-a26" userLabel="MaleFrontDetailView">
-                                        <rect key="frame" x="210" y="54" width="180" height="324"/>
+                                        <rect key="frame" x="210" y="53" width="180" height="315"/>
                                     </imageView>
                                     <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HPI-8K-mGd" userLabel="MaleBackDetailView">
-                                        <rect key="frame" x="210" y="54" width="180" height="324"/>
+                                        <rect key="frame" x="210" y="53" width="180" height="315"/>
                                     </imageView>
                                     <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="USu-P7-EuZ" userLabel="FemaleFrontDetailView">
-                                        <rect key="frame" x="210" y="54" width="180" height="324"/>
+                                        <rect key="frame" x="210" y="53" width="180" height="315"/>
                                     </imageView>
                                     <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0dH-yj-JN8" userLabel="FemaleBackDetailView">
-                                        <rect key="frame" x="210" y="54" width="180" height="324"/>
+                                        <rect key="frame" x="210" y="53" width="180" height="315"/>
                                     </imageView>
                                     <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Mbm-MC-Tam">
-                                        <rect key="frame" x="0.0" y="332" width="600" height="100"/>
+                                        <rect key="frame" x="0.0" y="320" width="600" height="100"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="B4A-vf-2pO"/>
@@ -267,7 +267,7 @@
                                         </constraints>
                                     </tableView>
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0nf-Af-uCv">
-                                        <rect key="frame" x="0.0" y="368" width="600" height="64"/>
+                                        <rect key="frame" x="0.0" y="356" width="600" height="64"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVt-bF-Gby">
                                                 <rect key="frame" x="302" y="0.0" width="298" height="64"/>
@@ -343,9 +343,9 @@
                                 </constraints>
                             </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QzO-Jw-bH7">
-                                <rect key="frame" x="20" y="72" width="560" height="29"/>
+                                <rect key="frame" x="20" y="76" width="560" height="37"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="cQi-iO-SKq"/>
+                                    <constraint firstAttribute="height" constant="36" id="cQi-iO-SKq"/>
                                 </constraints>
                                 <segments>
                                     <segment title="前"/>
@@ -365,7 +365,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="QzO-Jw-bH7" firstAttribute="top" secondItem="S38-kf-563" secondAttribute="bottom" constant="8" id="89U-3W-Iwj"/>
+                            <constraint firstItem="QzO-Jw-bH7" firstAttribute="top" secondItem="S38-kf-563" secondAttribute="bottom" constant="12" id="89U-3W-Iwj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6cy-Bo-bxg" secondAttribute="trailing" constant="-20" id="8bi-Fn-U9s"/>
                             <constraint firstItem="QzO-Jw-bH7" firstAttribute="leading" secondItem="Ae1-qS-wYV" secondAttribute="leadingMargin" id="9V5-q3-Fmy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="uQt-Iy-GVH" secondAttribute="trailing" constant="-20" id="AbB-Km-4nW"/>
