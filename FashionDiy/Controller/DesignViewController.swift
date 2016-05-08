@@ -33,6 +33,7 @@ class DesignViewController: UIViewController , UITableViewDelegate , UITableView
     var designDataSourceCount = 0
     
     var currentDesignType = -1
+    var currentDesignView:UIImageView?//放置子视图的父控件
     let MALE_DESIGN = 0
     let FEMALE_DESIGN = 1
     let COUPLE_DESIGN = 2
@@ -393,9 +394,11 @@ class DesignViewController: UIViewController , UITableViewDelegate , UITableView
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         let chooseImage = info[UIImagePickerControllerOriginalImage] as! UIImage
-        var imageView:UIImageView = getCurrentDesignType()
-        //imageView.hidden = false
-        imageView.image = chooseImage
+        currentDesignView = getCurrentDesignType()
+        let childContentView = ScaleRotateImageView()
+//        childContentView.delegate = self
+        childContentView.setImage(chooseImage)
+        currentDesignView!.addSubview(childContentView)
         picker.dismissViewControllerAnimated(true) { () -> Void in
             
         }
@@ -437,6 +440,10 @@ class DesignViewController: UIViewController , UITableViewDelegate , UITableView
             imageView2!.hidden = true
         }
     }
+    
+//    func didDeletedChildView(view: UIView){
+//        view.removeFromSuperview()
+//    }
     
 
     override func didReceiveMemoryWarning() {
