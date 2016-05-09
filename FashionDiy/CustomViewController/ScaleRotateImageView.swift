@@ -32,9 +32,9 @@ class ScaleRotateImageView: UIView {
     
     func setupView(){
         view = loadViewFromXib()
-        view.frame = bounds
-        view.autoresizingMask = [UIViewAutoresizing.FlexibleWidth , UIViewAutoresizing.FlexibleHeight]
-        view.translatesAutoresizingMaskIntoConstraints = true
+        //view.frame = bounds
+        //view.autoresizingMask = [UIViewAutoresizing.FlexibleWidth , UIViewAutoresizing.FlexibleHeight]
+        view.translatesAutoresizingMaskIntoConstraints = false
         setParentViewEvent()
         addSubview(view)
     }
@@ -67,6 +67,7 @@ class ScaleRotateImageView: UIView {
     }
     
     func setImage(image:UIImage){
+        contentImageView.contentMode = UIViewContentMode.ScaleAspectFit
         contentImageView.image = image
     }
     

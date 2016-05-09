@@ -78,6 +78,7 @@ class DesignViewController: UIViewController , UITableViewDelegate , UITableView
         
         initTableView()
         initButtonClickEvent()
+        initDesignDetailView()
     }
     
     func initTableView(){
@@ -149,6 +150,13 @@ class DesignViewController: UIViewController , UITableViewDelegate , UITableView
     func initButtonClickEvent(){
         maleBottomDesignView.styleButton.addTarget(self, action: "styleButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
         maleBottomDesignView.photoButton.addTarget(self, action: "takePhotoButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+    }
+    
+    func initDesignDetailView(){
+        maleFrontDesignView.translatesAutoresizingMaskIntoConstraints = false
+        maleBackDesignView.translatesAutoresizingMaskIntoConstraints = false
+        femaleFrontDesignView.translatesAutoresizingMaskIntoConstraints = false
+        femaleBackDesignView.translatesAutoresizingMaskIntoConstraints = false
     }
     
     @IBAction func designClothClicked(sender:UIImageView){
