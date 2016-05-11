@@ -20,42 +20,44 @@ class ScaleRotateImageView: UIView {
 //    var delegate: ChildViewDeletedDelegate?
     
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupView()
-    }
+//    override init(frame: CGRect) {
+//        super.init(frame: frame)
+//        setupView()
+//    }
+//    
+//    required init?(coder aDecoder: NSCoder) {
+//        super.init(coder: aDecoder)
+//        setupView()
+//    }
+//    
+//    func setupView(){
+//        view = loadViewFromXib()
+//        view.frame = CGRectMake(0, 0, 84, 84)
+//        view.autoresizingMask = [UIViewAutoresizing.FlexibleWidth , UIViewAutoresizing.FlexibleHeight]
+//        view.translatesAutoresizingMaskIntoConstraints = false
+//        //setParentViewEvent()
+//        addSubview(view)
+//    }
+//    
+//    func loadViewFromXib() -> UIView{
+//        let bundle = NSBundle(forClass: self.dynamicType)
+//        let xib = UINib(nibName: String(self.dynamicType), bundle: bundle)
+//        let view = xib.instantiateWithOwner(self, options: nil).first as! UIView
+//        return view
+//    }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setupView()
-    }
+    //func setParentViewEvent(){
+    //    self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "childContentClicked:"))
+    //}
     
-    func setupView(){
-        view = loadViewFromXib()
-        //view.frame = bounds
-        //view.autoresizingMask = [UIViewAutoresizing.FlexibleWidth , UIViewAutoresizing.FlexibleHeight]
-        view.translatesAutoresizingMaskIntoConstraints = false
-        setParentViewEvent()
-        addSubview(view)
-    }
-    
-    func loadViewFromXib() -> UIView{
-        let bundle = NSBundle(forClass: self.dynamicType)
-        let xib = UINib(nibName: String(self.dynamicType), bundle: bundle)
-        let view = xib.instantiateWithOwner(self, options: nil).first as! UIView
-        return view
-    }
-    
-    func setParentViewEvent(){
-        self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "childContentClicked:"))
-    }
-    
-    @IBAction func childContentClicked(sender:UIView){
+    func childContentClicked(){
+        print("childContentClicked")
         deleteButton.hidden ? (deleteButton.hidden = false) : (deleteButton.hidden = true)
         actionButton.hidden ? (actionButton.hidden = false) : (actionButton.hidden = true)
     }
     
     @IBAction func deleteButtonClicked(sender: CustomButton) {
+        print("click delete button")
 //        if delegate != nil{
 //            delegate?.didDeletedChildView(self)
 //        }

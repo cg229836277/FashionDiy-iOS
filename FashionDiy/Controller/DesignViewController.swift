@@ -403,13 +403,34 @@ class DesignViewController: UIViewController , UITableViewDelegate , UITableView
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         let chooseImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         currentDesignView = getCurrentDesignType()
-        let childContentView = ScaleRotateImageView()
-//        childContentView.delegate = self
-        childContentView.setImage(chooseImage)
-        currentDesignView!.addSubview(childContentView)
+        addChildViewToDetailParent(currentDesignView!, source: chooseImage)
         picker.dismissViewControllerAnimated(true) { () -> Void in
             
         }
+    }
+    
+    func addChildViewToDetailParent(parentView:UIImageView , source:UIImage){
+        if let childView = NSBundle.mainBundle().loadNibNamed("ScaleRotateImageView", owner: self, options: nil).first as? ScaleRotateImageView {
+            childView.translatesAutoresizingMaskIntoConstraints = false
+            parentView.addSubview(childView)
+            //stretchToSuperView(parentView)
+//            childView.translatesAutoresizingMaskIntoConstraints = false
+            stretchToSuperView(parentView , childView: childView)
+            childView.setImage(source)
+            childView.addGestureRecognizer(UITapGestureRecognizer(target: DesignViewController.self, action: "childContentClicked:"))
+        }
+    }
+    
+    func stretchToSuperView(superView : UIImageView , childView : ScaleRotateImageView){
+        superView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[childView]|", options: NSLayoutFormatOptions.AlignAllCenterX, metrics: nil, views: ["superView":superView , "childView":childView]))
+        
+        superView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[childView]|", options: NSLayoutFormatOptions.AlignAllCenterY, metrics: nil, views: ["superView":superView , "childView":childView]))
+    }
+    
+    @IBAction func childContentClicked(sender:AnyObject){
+        print("childContent clicked")
+        let receive = sender as! ScaleRotateImageView
+        receive.childContentClicked()
     }
     
     func getCurrentDesignType()->UIImageView{
