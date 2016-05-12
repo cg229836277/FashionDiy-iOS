@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//import SnapKit
 
 class DesignViewController: UIViewController , UITableViewDelegate , UITableViewDataSource , UIImagePickerControllerDelegate , UINavigationControllerDelegate{
     
@@ -422,9 +423,7 @@ class DesignViewController: UIViewController , UITableViewDelegate , UITableView
     }
     
     func stretchToSuperView(superView : UIImageView , childView : ScaleRotateImageView){
-        superView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[childView]|", options: NSLayoutFormatOptions.AlignAllCenterX, metrics: nil, views: ["superView":superView , "childView":childView]))
         
-        superView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[childView]|", options: NSLayoutFormatOptions.AlignAllCenterY, metrics: nil, views: ["superView":superView , "childView":childView]))
     }
     
     @IBAction func childContentClicked(sender:AnyObject){

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "407DD6063B73182C9456856C98C9D8D84821C876",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3AF18F9C6F5D633BAA0B3F935459E0C777C82047" : 0,
+    "407DD6063B73182C9456856C98C9D8D84821C876" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "B237862B-5F94-4B3D-81C0-9918356E6D7C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3AF18F9C6F5D633BAA0B3F935459E0C777C82047" : "FashionDiy\/SnapKit\/",
+    "407DD6063B73182C9456856C98C9D8D84821C876" : "FashionDiy\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "FashionDiy",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "FashionDiy.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/SnapKit\/SnapKit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3AF18F9C6F5D633BAA0B3F935459E0C777C82047"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/cg229836277\/FashionDiy-iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "407DD6063B73182C9456856C98C9D8D84821C876"
+    }
+  ]
+}

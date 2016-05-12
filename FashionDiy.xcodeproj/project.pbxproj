@@ -57,7 +57,73 @@
 		DB5048DA1CDE23CF00B2F811 /* design_model_wifi.svg in Resources */ = {isa = PBXBuildFile; fileRef = DB5048B81CDE23CF00B2F811 /* design_model_wifi.svg */; };
 		DB5048F01CDE32D300B2F811 /* ScaleRotateImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5048EF1CDE32D300B2F811 /* ScaleRotateImageView.swift */; };
 		DB5048F21CDE330200B2F811 /* ScaleRotateImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5048F11CDE330200B2F811 /* ScaleRotateImageView.xib */; };
+		DB7A5DED1CE4CE6400898141 /* SnapKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DB7A5DE01CE4CE4700898141 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DB7A5DDF1CE4CE4700898141 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB7A5DD61CE4CE4700898141 /* SnapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EEBCC9D819CC627D0083B827;
+			remoteInfo = "SnapKit iOS";
+		};
+		DB7A5DE11CE4CE4700898141 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB7A5DD61CE4CE4700898141 /* SnapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 537DCE921C35CC8800B5B899;
+			remoteInfo = "SnapKit tvOS";
+		};
+		DB7A5DE31CE4CE4700898141 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB7A5DD61CE4CE4700898141 /* SnapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EECDB37A1AC0C9D4006BBC11;
+			remoteInfo = "SnapKit OSX";
+		};
+		DB7A5DE51CE4CE4700898141 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB7A5DD61CE4CE4700898141 /* SnapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EEBCC9E219CC627E0083B827;
+			remoteInfo = "SnapKit iOS Tests";
+		};
+		DB7A5DE71CE4CE4700898141 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB7A5DD61CE4CE4700898141 /* SnapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 537DCEAF1C35D90A00B5B899;
+			remoteInfo = "SnapKit tvOS Tests";
+		};
+		DB7A5DE91CE4CE4700898141 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB7A5DD61CE4CE4700898141 /* SnapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EECDB3841AC0C9D4006BBC11;
+			remoteInfo = "SnapKit OSX Tests";
+		};
+		DB7A5DEB1CE4CE5C00898141 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB7A5DD61CE4CE4700898141 /* SnapKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EEBCC9D719CC627D0083B827;
+			remoteInfo = "SnapKit iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DBBEEBF41CE4C7A5006B99B3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DB7A5DED1CE4CE6400898141 /* SnapKit.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		DB4E4D0F1CD4D31E00B72326 /* ClothesSetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClothesSetViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +177,7 @@
 		DB5048EF1CDE32D300B2F811 /* ScaleRotateImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleRotateImageView.swift; sourceTree = "<group>"; };
 		DB5048F11CDE330200B2F811 /* ScaleRotateImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScaleRotateImageView.xib; sourceTree = "<group>"; };
 		DB656A891CABF16D008D774B /* FashionDiy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FashionDiy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB7A5DD61CE4CE4700898141 /* SnapKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SnapKit.xcodeproj; path = "../../Users/chuckchan/Desktop/SnapKit-feature-0.20.0/SnapKit.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +291,7 @@
 		DB656A801CABF16D008D774B = {
 			isa = PBXGroup;
 			children = (
+				DB7A5DD61CE4CE4700898141 /* SnapKit.xcodeproj */,
 				DB5048961CDE23CF00B2F811 /* SVGFiles */,
 				DB503A1C1CCE50020090F3B1 /* FashionDiy */,
 				DB656A8A1CABF16D008D774B /* Products */,
@@ -238,6 +306,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		DB7A5DD71CE4CE4700898141 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB7A5DE01CE4CE4700898141 /* SnapKit.framework */,
+				DB7A5DE21CE4CE4700898141 /* SnapKit.framework */,
+				DB7A5DE41CE4CE4700898141 /* SnapKit.framework */,
+				DB7A5DE61CE4CE4700898141 /* SnapKit iOS Tests.xctest */,
+				DB7A5DE81CE4CE4700898141 /* SnapKit tvOS Tests.xctest */,
+				DB7A5DEA1CE4CE4700898141 /* SnapKit OSX Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -248,10 +329,12 @@
 				DB656A851CABF16D008D774B /* Sources */,
 				DB656A861CABF16D008D774B /* Frameworks */,
 				DB656A871CABF16D008D774B /* Resources */,
+				DBBEEBF41CE4C7A5006B99B3 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DB7A5DEC1CE4CE5C00898141 /* PBXTargetDependency */,
 			);
 			name = FashionDiy;
 			productName = FashionDiy;
@@ -285,12 +368,63 @@
 			mainGroup = DB656A801CABF16D008D774B;
 			productRefGroup = DB656A8A1CABF16D008D774B /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = DB7A5DD71CE4CE4700898141 /* Products */;
+					ProjectRef = DB7A5DD61CE4CE4700898141 /* SnapKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				DB656A881CABF16D008D774B /* FashionDiy */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		DB7A5DE01CE4CE4700898141 /* SnapKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SnapKit.framework;
+			remoteRef = DB7A5DDF1CE4CE4700898141 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DB7A5DE21CE4CE4700898141 /* SnapKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SnapKit.framework;
+			remoteRef = DB7A5DE11CE4CE4700898141 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DB7A5DE41CE4CE4700898141 /* SnapKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SnapKit.framework;
+			remoteRef = DB7A5DE31CE4CE4700898141 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DB7A5DE61CE4CE4700898141 /* SnapKit iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SnapKit iOS Tests.xctest";
+			remoteRef = DB7A5DE51CE4CE4700898141 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DB7A5DE81CE4CE4700898141 /* SnapKit tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SnapKit tvOS Tests.xctest";
+			remoteRef = DB7A5DE71CE4CE4700898141 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DB7A5DEA1CE4CE4700898141 /* SnapKit OSX Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SnapKit OSX Tests.xctest";
+			remoteRef = DB7A5DE91CE4CE4700898141 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		DB656A871CABF16D008D774B /* Resources */ = {
@@ -362,6 +496,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		DB7A5DEC1CE4CE5C00898141 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SnapKit iOS";
+			targetProxy = DB7A5DEB1CE4CE5C00898141 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		DB503A1F1CCE50020090F3B1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -421,6 +563,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -459,6 +602,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_SWIFT_FLAGS = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -471,8 +615,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FashionDiy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-DSNAPKIT_DEPLOYMENT_LEGACY";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chuck.FashionDiy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				hfghf = "";
 			};
 			name = Debug;
 		};
@@ -482,8 +628,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FashionDiy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-DSNAPKIT_DEPLOYMENT_LEGACY";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chuck.FashionDiy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				hfghf = "";
 			};
 			name = Release;
 		};
