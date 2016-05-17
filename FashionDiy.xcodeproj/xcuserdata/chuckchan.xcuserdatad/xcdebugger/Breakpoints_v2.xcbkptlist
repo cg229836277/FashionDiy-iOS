@@ -216,12 +216,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FashionDiy/Controller/DesignViewController.swift"
-            timestampString = "485184695.383282"
+            timestampString = "485186915.32713"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "435"
-            endingLineNumber = "435"
-            landmarkName = "childContentClicked(_:)"
+            startingLineNumber = "440"
+            endingLineNumber = "440"
+            landmarkName = "getCurrentDesignType()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
